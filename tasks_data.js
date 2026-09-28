@@ -6,8 +6,8 @@ window.__TASKS_DATA__ = {
     "last_updated": "2026-09-28",
     "metrics": {
       "total_tasks": 23,
-      "completed_tasks": 8,
-      "progress_percentage": 35
+      "completed_tasks": 11,
+      "progress_percentage": 48
     }
   },
   "milestones": [
@@ -180,43 +180,46 @@ window.__TASKS_DATA__ = {
       "id": "TASK-009",
       "title": "Design System Stitch & Especificação Visual",
       "description": "Definição do docs/DESIGN_SYSTEM_STITCH.md com tokens de cor (verde esmeralda / neutros), tipografia legível e componentes modulares.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m2_design_arte",
       "tier": "tier1_frontier",
       "indicators": [
         "Paleta harmoniosa e de alto contraste aprovada",
         "Componentes visuais de cards e badges documentados"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-28"
     },
     {
       "id": "TASK-010",
       "title": "Prompts Estruturados para o Google Stitch",
       "description": "Redação de prompts de alta fidelidade prontos para o stitch.withgoogle.com para as telas: Início, Consultas, Exames e Transparência.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m2_design_arte",
       "tier": "tier1_frontier",
       "indicators": [
         "Prompt de tela inicial binária com busca retrátil",
         "Prompt de lista alfabética e cards com badges de verificação"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-28"
     },
     {
       "id": "TASK-011",
       "title": "Direção de Arte & Geração de Ativos Visuais",
       "description": "Definição do estilo estético único e geração dos ícones e ilustrações temáticas para o Guia.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m2_design_arte",
       "tier": "tier2_fast",
       "indicators": [
         "Identidade visual coesa sem dissonância estilística",
-        "Ativos vetoriais e imagens salvas na pasta pública do projeto"
+        "Prompts otimizados para ChatGPT DALL-E e ativos documentados"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-28"
     },
     {
       "id": "TASK-012",
