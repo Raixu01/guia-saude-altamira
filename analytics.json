@@ -1,67 +1,71 @@
 {
   "project": {
-    "name": "Framework de Desenvolvimento & Orquestração com IA",
-    "last_updated": "2026-09-24",
+    "name": "Guia de Saúde Altamira",
+    "last_updated": "2026-09-28",
     "currency_primary": "BRL",
     "currency_secondary": "USD"
   },
   "kpis": {
     "active_users_daily": 0,
     "active_users_monthly": 0,
-    "total_signups": 0,
+    "total_contacts_initiated": 0,
     "mrr_brl": 0.0,
     "mrr_usd": 0.0,
-    "checkout_conversion_rate": 0.0,
+    "contact_conversion_rate": 0.0,
     "activation_rate": 0.0
   },
   "funnel": [
     {
-      "step": "Descoberta / Visitantes",
+      "step": "1. Acessos ao Guia (Visitantes)",
+      "count": 0,
+      "conversion_percentage": 100.0
+    },
+    {
+      "step": "2. Escolha de Consulta ou Exame",
       "count": 0,
       "conversion_percentage": 0.0
     },
     {
-      "step": "Cadastros (Signups)",
+      "step": "3. Visualização de Profissional ou Clínica",
       "count": 0,
       "conversion_percentage": 0.0
     },
     {
-      "step": "Ativação (Aha! Moment)",
+      "step": "4. Clique no Botão de WhatsApp / Ligação",
       "count": 0,
       "conversion_percentage": 0.0
     },
     {
-      "step": "Checkout Iniciado",
-      "count": 0,
-      "conversion_percentage": 0.0
-    },
-    {
-      "step": "Assinatura / Pagamento Concluído",
+      "step": "5. Sugestão de Correção / Colaboração",
       "count": 0,
       "conversion_percentage": 0.0
     }
   ],
   "events_catalog": [
     {
-      "event_name": "user_signed_up",
-      "description": "Disparado ao concluir cadastro",
-      "target_kpi": "total_signups"
+      "event_name": "app_opened",
+      "description": "Disparado ao abrir a aplicação web",
+      "target_kpi": "active_users_daily"
     },
     {
-      "event_name": "feature_core_used",
-      "description": "Disparado ao gerar primeiro resultado (Ativação)",
+      "event_name": "category_selected",
+      "description": "Disparado ao clicar em Consulta ou Exames",
       "target_kpi": "activation_rate"
     },
     {
-      "event_name": "checkout_started",
-      "description": "Disparado ao abrir tela de checkout",
-      "target_kpi": "checkout_conversion_rate"
+      "event_name": "provider_viewed",
+      "description": "Disparado ao abrir card de médico ou clínica",
+      "target_kpi": "activation_rate"
     },
     {
-      "event_name": "payment_completed",
-      "description": "Webhook confirmado de assinatura ou compra",
-      "target_kpi": "mrr_brl"
+      "event_name": "contact_clicked",
+      "description": "Disparado ao clicar no botão de WhatsApp ou Ligar",
+      "target_kpi": "contact_conversion_rate"
+    },
+    {
+      "event_name": "correction_suggested",
+      "description": "Disparado ao enviar formulário de sugestão de correção",
+      "target_kpi": "total_contacts_initiated"
     }
-  ],
-  "recent_events": []
+  ]
 }

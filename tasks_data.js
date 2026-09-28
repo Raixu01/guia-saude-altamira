@@ -1,388 +1,390 @@
 window.__TASKS_DATA__ = {
   "project": {
-    "name": "Framework de Desenvolvimento & Orquestração com IA",
-    "summary": "Protocolo operacional, templates padronizados e dashboard visual duplo (Tarefas + Métricas do Produto) para desenvolvimento autônomo com agentes de IA, sob medida para criadores ágeis e neurodivergentes (TDAH).",
-    "version": "1.6.0",
-    "last_updated": "2026-09-25",
+    "name": "Guia de Saúde Altamira",
+    "summary": "Guia público, mobile-first e regido pela honestidade radical para consulta de especialidades médicas e locais de exames em Altamira-PA, com conexão direta aos prestadores e indicação clara de incertezas.",
+    "version": "1.0.0",
+    "last_updated": "2026-09-28",
     "metrics": {
       "total_tasks": 23,
-      "completed_tasks": 23,
-      "progress_percentage": 100
+      "completed_tasks": 8,
+      "progress_percentage": 35
     }
   },
   "milestones": [
-    { "id": "m1_fundacao", "title": "Marco 1: Fundação, Narrativa & Planejamento Sistêmico", "order": 1 },
-    { "id": "m2_design_arte", "title": "Marco 2: Design UI/UX & Direção de Arte", "order": 2 },
-    { "id": "m3_backend_core", "title": "Marco 3: Backend Core & Testes", "order": 3 },
-    { "id": "m4_frontend_ui", "title": "Marco 4: Frontend & Integração", "order": 4 },
-    { "id": "m5_auditoria_growth", "title": "Marco 5: Auditoria & Go-to-Market", "order": 5 }
+    {
+      "id": "m1_fundacao",
+      "title": "Marco 1: Fundação, Narrativa & Planejamento Sistêmico",
+      "order": 1
+    },
+    {
+      "id": "m2_design_arte",
+      "title": "Marco 2: Design UI/UX & Direção de Arte",
+      "order": 2
+    },
+    {
+      "id": "m3_backend_core",
+      "title": "Marco 3: Backend Core & Ingestão de Planilhas",
+      "order": 3
+    },
+    {
+      "id": "m4_frontend_ui",
+      "title": "Marco 4: Frontend UI & Integração Mobile-First",
+      "order": 4
+    },
+    {
+      "id": "m5_auditoria_growth",
+      "title": "Marco 5: Auditoria Tier 3, Métricas & Go-to-Market",
+      "order": 5
+    }
   ],
   "columns": [
-    { "id": "todo", "title": "Backlog / A Fazer" },
-    { "id": "in_progress", "title": "Em Desenvolvimento" },
-    { "id": "review", "title": "Em Revisão & Auditoria" },
-    { "id": "done", "title": "Concluído / Entregue" }
+    {
+      "id": "todo",
+      "title": "Backlog / A Fazer"
+    },
+    {
+      "id": "in_progress",
+      "title": "Em Desenvolvimento"
+    },
+    {
+      "id": "review",
+      "title": "Em Revisão & Auditoria"
+    },
+    {
+      "id": "done",
+      "title": "Concluído / Entregue"
+    }
   ],
   "tasks": [
     {
       "id": "TASK-001",
-      "title": "Entrevista /grill-me e Planejamento Estratégico",
-      "description": "Entrevista estruturada com o Bruno para mapear todos os ramos de decisão do framework a partir dos 21 princípios.",
+      "title": "Entrevista /grill-me e Alinhamento de Produto",
+      "description": "Entrevista guiada passo a passo mapeando a linha lógica, público local de Altamira, navegação em árvore e política de honestidade radical.",
       "status": "done",
       "milestone": "m1_fundacao",
       "tier": "tier1_frontier",
       "indicators": [
-        "Todas as dúvidas e dependências elucidadas uma a uma",
-        "Plano de implementação formal gerado e aprovado"
+        "Definição do público prioritário (moradores e familiares)",
+        "Arquitetura de navegação binária aprovada"
       ],
       "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-28"
     },
     {
       "id": "TASK-002",
-      "title": "Criação do AGENTS.md e Protocolo Canônico Mestre",
-      "description": "Redação do protocolo completo contemplando perfil pessoal, autonomia em lote, orquestração multi-modelo e gestão de segredos.",
+      "title": "Plano de Implementação Formal do Marco 1",
+      "description": "Elaboração e aprovação do artefato técnico com arquitetura de informação, fluxos de navegação e modelo relacional de dados.",
       "status": "done",
       "milestone": "m1_fundacao",
       "tier": "tier1_frontier",
       "indicators": [
-        "21 princípios do CSV integrados integralmente",
-        "Cartão de Configuração Guiada padronizado",
-        "Regras canônicas consolidadas em AGENTS.md"
+        "Artefato plan_marco1_guia_saude_altamira.md gerado",
+        "Aprovação formal registrada pelo operador"
       ],
       "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-28"
     },
     {
       "id": "TASK-003",
-      "title": "Construção da Suite de Templates Modulares",
-      "description": "Criação dos modelos estruturados de PRD, Business Model Canvas, Tech Stack, Modelo Financeiro, Resumo e Git Playbook.",
+      "title": "Narrativa do Projeto & Storytelling",
+      "description": "Redação do docs/NARRATIVE_STORYTELLING.md retratando o contexto de Altamira, a dor das planilhas soltas e a tese de transparência radical.",
       "status": "done",
       "milestone": "m1_fundacao",
-      "tier": "tier2_fast",
+      "tier": "tier1_frontier",
       "indicators": [
-        "Todos os arquivos de templates criados na pasta templates/",
-        "Catálogo de telemetria e monetização dupla (BR/Global) incluídos"
+        "Contexto local e gargalos concretos documentados",
+        "Tese de honestidade radical sem falsas promessas de agendamento"
       ],
       "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-28"
     },
     {
       "id": "TASK-004",
-      "title": "Desenvolvimento da Plataforma Visual dashboard.html",
-      "description": "Construção de interface visual rica, responsiva e moderna com Tailwind CSS para acompanhamento em tempo real das tarefas e métricas.",
+      "title": "Canvas da Proposta de Valor com Amarração 1:1",
+      "description": "Construção do docs/VALUE_PROPOSITION_CANVAS.md com conexão biunívoca estrita entre 5 dores e 5 aliviadores no PRD.",
       "status": "done",
-      "milestone": "m4_frontend_ui",
-      "tier": "tier2_fast",
+      "milestone": "m1_fundacao",
+      "tier": "tier1_frontier",
       "indicators": [
-        "Kanban dinâmico com colunas de status",
-        "Barra de progresso e cartões de métricas",
-        "Carregamento automático de tasks.json com fallback resiliente"
+        "Nenhuma dor sem aliviador correspondente",
+        "Matriz de rastreabilidade 1:1 auditada"
       ],
       "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-28"
     },
     {
       "id": "TASK-005",
-      "title": "Elaboração do README.md e Guia de Uso",
-      "description": "Documentar como replicar o framework para novos projetos e como conduzir agentes no dia a dia.",
+      "title": "Business Model Canvas Sistêmico & Sustentabilidade",
+      "description": "Elaboração do docs/BUSINESS_MODEL_CANVAS.md contemplando gratuidade cidadã, fases de monetização B2B e atividades operacionais.",
       "status": "done",
-      "milestone": "m5_auditoria_growth",
-      "tier": "tier2_fast",
+      "milestone": "m1_fundacao",
+      "tier": "tier1_frontier",
       "indicators": [
-        "README.md claro e objetivo na raiz do repositório",
-        "Instruções práticas de bootstrap para novos projetos"
+        "Desdobramento de 100% dos canais e compromissos em atividades",
+        "Modelo de sustentabilidade em 3 fases validado"
       ],
       "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-28"
     },
     {
       "id": "TASK-006",
-      "title": "Remoção de Duplicidades e Padronização Canônica",
-      "description": "Remover o arquivo duplicado agentes.md da raiz, consolidando AGENTS.md como fonte única da verdade.",
+      "title": "Product Requirements Document (PRD) Consolidado",
+      "description": "Documentação dos requisitos funcionais (RF-01 a RF-08), não-funcionais (performance mobile) e eventos de telemetria.",
       "status": "done",
-      "milestone": "m5_auditoria_growth",
-      "tier": "tier2_fast",
+      "milestone": "m1_fundacao",
+      "tier": "tier1_frontier",
       "indicators": [
-        "Arquivo agentes.md removido sem perda de conteúdo",
-        "AGENTS.md preservado e referenciado no README.md"
+        "Requisitos funcionais amarrados ao Canvas de Proposta de Valor",
+        "Catálogo de telemetria definido para analytics.json"
       ],
       "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-28"
     },
     {
       "id": "TASK-007",
-      "title": "Detalhamento Prático da Orquestração 3-Tier no AGENTS.md",
-      "description": "Documentar no AGENTS.md a mecânica de execução com invoke_subagent (Model: flash) para Tier 2 e auditoria Tier 3.",
+      "title": "Especificação Técnica & Modelagem Supabase",
+      "description": "Criação do TECH_STACK.md com arquitetura desacoplada (FastAPI + React/Next + Supabase PostgreSQL) e esquema relacional das tabelas.",
       "status": "done",
       "milestone": "m1_fundacao",
       "tier": "tier1_frontier",
       "indicators": [
-        "Seção 3 do AGENTS.md atualizada com exemplos práticos de chamada de subagentes",
-        "Critérios de passagem de bastão (handoff) explicitados sem jargões"
+        "Modelagem relacional de especialidades, clínicas, médicos e exames",
+        "Diagnóstico de CLIs do ambiente local documentado"
       ],
       "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-28"
     },
     {
       "id": "TASK-008",
-      "title": "Inclusão de Roteiros de /grill-me nos Templates Modulares",
-      "description": "Inserir em cada template .md uma seção fixa no topo com perguntas cirúrgicas para a IA entrevistar o usuário antes de preencher.",
+      "title": "Modelo de Custos & Ficha Executiva",
+      "description": "Criação de FINANCIAL_MODEL.md e SUMMARY.md com custo zero inicial de infraestrutura e pitch de 1 parágrafo.",
       "status": "done",
       "milestone": "m1_fundacao",
       "tier": "tier1_frontier",
       "indicators": [
-        "Roteiro de 3 a 5 perguntas embutido em PRD, Canvas, Tech Stack e Financeiro",
-        "Opções sugeridas e recomendadas pré-formatadas para facilitar decisões com TDAH"
+        "Estrutura de custos em camadas gratuitas comprovada",
+        "SUMMARY.md sintetizado sem ambiguidades"
       ],
       "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-28"
     },
     {
       "id": "TASK-009",
-      "title": "Criação do Modelo de Telemetria templates/analytics_template.json",
-      "description": "Criar template de schema limpo para registro de eventos de uso, KPIs de usuários e funil de ativação/conversão.",
-      "status": "done",
-      "milestone": "m5_auditoria_growth",
-      "tier": "tier2_fast",
+      "title": "Design System Stitch & Especificação Visual",
+      "description": "Definição do docs/DESIGN_SYSTEM_STITCH.md com tokens de cor (verde esmeralda / neutros), tipografia legível e componentes modulares.",
+      "status": "todo",
+      "milestone": "m2_design_arte",
+      "tier": "tier1_frontier",
       "indicators": [
-        "Arquivo templates/analytics_template.json criado",
-        "Schema com métricas-chave (DAU, MAU, MRR, Funil, Eventos) pronto para uso real"
+        "Paleta harmoniosa e de alto contraste aprovada",
+        "Componentes visuais de cards e badges documentados"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     },
     {
       "id": "TASK-010",
-      "title": "Desenvolvimento das Abas e Métricas do Produto no dashboard.html",
-      "description": "Atualizar dashboard.html com seletor de abas (Kanban vs. Métricas do Produto), suporte a analytics.json e empty state elegante.",
-      "status": "done",
-      "milestone": "m4_frontend_ui",
-      "tier": "tier2_fast",
+      "title": "Prompts Estruturados para o Google Stitch",
+      "description": "Redação de prompts de alta fidelidade prontos para o stitch.withgoogle.com para as telas: Início, Consultas, Exames e Transparência.",
+      "status": "todo",
+      "milestone": "m2_design_arte",
+      "tier": "tier1_frontier",
       "indicators": [
-        "Navegação por abas responsiva no topo",
-        "Aba de métricas com KPIs, funil e feed de eventos",
-        "Empty state elegante exibido quando analytics.json não existir ou estiver zerado"
+        "Prompt de tela inicial binária com busca retrátil",
+        "Prompt de lista alfabética e cards com badges de verificação"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     },
     {
       "id": "TASK-011",
-      "title": "Auditoria de Conformidade com os 21 Princípios",
-      "description": "Revisar todos os arquivos modificados contra os 21 princípios e emitir parecer formal de auditoria Tier 3.",
-      "status": "done",
-      "milestone": "m5_auditoria_growth",
-      "tier": "tier3_reviewer",
+      "title": "Direção de Arte & Geração de Ativos Visuais",
+      "description": "Definição do estilo estético único e geração dos ícones e ilustrações temáticas para o Guia.",
+      "status": "todo",
+      "milestone": "m2_design_arte",
+      "tier": "tier2_fast",
       "indicators": [
-        "Todos os 21 princípios refletidos com precisão",
-        "tasks.json devidamente auditado e confirmado"
+        "Identidade visual coesa sem dissonância estilística",
+        "Ativos vetoriais e imagens salvas na pasta pública do projeto"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     },
     {
       "id": "TASK-012",
-      "title": "Protocolo Ativo de Provisionamento de CLIs, Autenticações e MCPs",
-      "description": "Estruturar o ciclo automatizado de detecção da stack, verificação no PATH, instalação autônoma de CLIs públicas e autenticação segura no AGENTS.md.",
-      "status": "done",
-      "milestone": "m5_auditoria_growth",
-      "tier": "tier1_frontier",
+      "title": "Provisionamento do Ambiente Python & FastAPI",
+      "description": "Configuração da pasta backend/ com uv/pip, FastAPI, Pydantic e uvicorn.",
+      "status": "todo",
+      "milestone": "m3_backend_core",
+      "tier": "tier2_fast",
       "indicators": [
-        "Seção detalhada no AGENTS.md com o ciclo de 5 passos de provisionamento de CLIs e MCPs",
-        "Matriz operacional completa no templates/TECH_STACK_TEMPLATE.md"
+        "Servidor FastAPI iniciando sem erros",
+        "Documentação OpenAPI acessível em /docs"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     },
     {
       "id": "TASK-013",
-      "title": "Etapa de Design UI/UX com Google Stitch e Geração de Prompts",
-      "description": "Formalizar no AGENTS.md e criar templates/DESIGN_SYSTEM_STITCH_TEMPLATE.md para a geração de especificações visuais e prompts prontos para o Google Stitch.",
-      "status": "done",
-      "milestone": "m2_design_arte",
-      "tier": "tier1_frontier",
+      "title": "Script de Ingestão de Planilhas para o Banco de Dados",
+      "description": "Construção de script CLI em Python para ler planilhas CSV/Excel locais e carregar no banco Supabase/PostgreSQL.",
+      "status": "todo",
+      "milestone": "m3_backend_core",
+      "tier": "tier2_fast",
       "indicators": [
-        "Fluxo pós-planejamento incluindo etapa explícita de UI/UX com Google Stitch",
-        "Template templates/DESIGN_SYSTEM_STITCH_TEMPLATE.md criado com estrutura de telas e prompt para o Stitch"
+        "Script processando planilhas com normalização de CRM e dados",
+        "Carga realizada com integridade referencial testada"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     },
     {
       "id": "TASK-014",
-      "title": "Arquitetura Desacoplada e Backend Prioritário em Python (FastAPI)",
-      "description": "Definir Python (FastAPI + Pydantic + Uvicorn) como backend padrão prioritário, separando expressamente as camadas frontend/ e backend/.",
-      "status": "done",
+      "title": "Endpoints REST da API de Consultas e Exames",
+      "description": "Implementação das rotas assíncronas /api/especialidades, /api/profissionais, /api/exames e /api/correcoes.",
+      "status": "todo",
       "milestone": "m3_backend_core",
-      "tier": "tier1_frontier",
+      "tier": "tier2_fast",
       "indicators": [
-        "Divisão explícita frontend/ e backend/ documentada no AGENTS.md e TECH_STACK_TEMPLATE.md",
-        "Python (FastAPI) definido como backend prioritário"
+        "Rotas retornando JSON padronizado com paginação e filtros",
+        "Validação de schemas com Pydantic"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     },
     {
       "id": "TASK-015",
-      "title": "Protocolo do Cartão Executivo de Decisão de Stack (Exceção ao Python)",
-      "description": "Criar o protocolo obrigatório que força a IA a emitir um Cartão de Decisão de Stack sempre que Python não for a melhor opção para um projeto.",
-      "status": "done",
+      "title": "Testes Automatizados de Backend & Contratos",
+      "description": "Criação e execução de suite de testes com pytest validando respostas da API e cenários de erro.",
+      "status": "todo",
       "milestone": "m3_backend_core",
-      "tier": "tier1_frontier",
+      "tier": "tier3_reviewer",
       "indicators": [
-        "Cartão de Decisão de Stack padronizado no AGENTS.md",
-        "Gatilhos de acionamento documentados"
+        "100% dos testes executados com sucesso no terminal",
+        "Zero falhas de contrato de dados"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     },
     {
       "id": "TASK-016",
-      "title": "Sincronização Geral da Suite de Documentos",
-      "description": "Sincronizar README.md, templates e dashboard com as capacidades de Design Stitch e Backend Python.",
-      "status": "done",
-      "milestone": "m5_auditoria_growth",
-      "tier": "tier3_reviewer",
+      "title": "Estrutura Base do Frontend Mobile-First",
+      "description": "Configuração da pasta frontend/ com React/Next.js, Tailwind CSS e tokens do Design System.",
+      "status": "todo",
+      "milestone": "m4_frontend_ui",
+      "tier": "tier2_fast",
       "indicators": [
-        "README.md atualizado",
-        "dashboard.html refletindo o estado real"
+        "Build do front executando sem warnings críticos",
+        "Layout mobile-first responsivo preparado"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     },
     {
       "id": "TASK-017",
-      "title": "Protocolo de Marcos e Checkpoints Estritos no AGENTS.md",
-      "description": "Proibir expressamente a execução megalomaníaca em turno único e estabelecer o protocolo dos 5 marcos sequenciais com parada obrigatória em cada checkpoint.",
-      "status": "done",
-      "milestone": "m1_fundacao",
-      "tier": "tier1_frontier",
+      "title": "Tela Inicial Binária com Lupa Retrátil",
+      "description": "Construção do componente da Home com os botões [ 🩺 Consulta ] e [ 🔬 Exames ] e campo de busca retrátil.",
+      "status": "todo",
+      "milestone": "m4_frontend_ui",
+      "tier": "tier2_fast",
       "indicators": [
-        "Seção 2 de AGENTS.md atualizada com proibição de one-shot e regras de checkpoint",
-        "Ciclo de 5 marcos sequenciais definido com clareza",
-        "Checklist da Seção 12 atualizado para verificar conformidade com os marcos"
+        "Interface limpa e intuitiva idêntica à especificação",
+        "Busca instantânea filtrando termos em tempo real"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     },
     {
       "id": "TASK-018",
-      "title": "Direção de Arte Unificada e Geração Híbrida de Imagens",
-      "description": "Integrar a etapa de Direção de Arte no AGENTS.md e templates/DESIGN_SYSTEM_STITCH_TEMPLATE.md, definindo fórmula canônica de prompts, catálogo de ativos e suporte híbrido (generate_image e externos).",
-      "status": "done",
-      "milestone": "m2_design_arte",
-      "tier": "tier1_frontier",
+      "title": "Árvore de Consultas & Cards de Contato Direto",
+      "description": "Construção do fluxo Especialidades -> Lista de Profissionais -> Card com botão direto para WhatsApp com mensagem contextualizada.",
+      "status": "todo",
+      "milestone": "m4_frontend_ui",
+      "tier": "tier2_fast",
       "indicators": [
-        "Seção 3 criada no DESIGN_SYSTEM_STITCH_TEMPLATE.md com regras de Direção de Arte",
-        "Fórmula de prompt padronizada e catálogo de ativos do MVP definidos",
-        "Roteiro /grill-me expandido com perguntas sobre imagens e ativos"
+        "Navegação fluida sem travamento",
+        "Badges de verificação exibidas em cada card"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     },
     {
       "id": "TASK-019",
-      "title": "Pipeline Visual de Etapas (Stepper) e Filtro por Marcos no dashboard.html",
-      "description": "Construir no dashboard.html um Stepper interativo de marcos no topo do Kanban com cálculo de progresso individual, badges nos cards e filtragem dinâmica por fase.",
-      "status": "done",
+      "title": "Índice Alfabético A-Z de Exames & Estabelecimentos",
+      "description": "Construção do catálogo de exames com seletor alfabético e lista de clínicas/laboratórios com aviso de confirmação direta.",
+      "status": "todo",
       "milestone": "m4_frontend_ui",
       "tier": "tier2_fast",
       "indicators": [
-        "Stepper horizontal de 5 etapas com status dinâmico (Concluído, Em Foco, Pendente)",
-        "Filtro interativo por marco conectado ao Kanban",
-        "Badges de marco estilizados em cada card de tarefa",
-        "Templates/dashboard.html atualizado em sincronia"
+        "Filtro por letra A-Z responsivo no smartphone",
+        "Aviso de confirmação prévia evidente em cada exame"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     },
     {
       "id": "TASK-020",
-      "title": "Sincronização do README.md e Auditoria Final Tier 3",
-      "description": "Atualizar README.md com o novo fluxo de Marcos e Direção de Arte, testar visualmente o dashboard e emitir o parecer final de auditoria.",
-      "status": "done",
-      "milestone": "m5_auditoria_growth",
-      "tier": "tier3_reviewer",
-      "indicators": [
-        "README.md atualizado com os 5 Marcos e Direção de Arte",
-        "dashboard.html validado localmente com 100% de responsividade",
-        "tasks.json atualizado com 100% de conclusão e auditoria confirmada"
-      ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
-    },
-    {
-      "id": "TASK-021",
-      "title": "Bypass de CORS e Atualização Imediata do dashboard.html",
-      "description": "Implementar protocolo de sincronização dupla (tasks_data.js e analytics_data.js), inicializador abrir_dashboard.bat, fallback de Drag & Drop e leitor de cache offline no dashboard.html.",
-      "status": "done",
+      "title": "Tela de Transparência Radical & Modal de Sugestões",
+      "description": "Página Como Funciona o Guia com declaração de limites legais e formulário simples para sugerir correções de contatos.",
+      "status": "todo",
       "milestone": "m4_frontend_ui",
       "tier": "tier2_fast",
       "indicators": [
-        "dashboard.html carrega instantaneamente via file:// sem erro de CORS",
-        "abrir_dashboard.bat criado e testado",
-        "Drag and Drop e seletor manual funcionais com persistência localStorage",
-        "Regra de Sincronização Dupla documentada no AGENTS.md e README.md"
+        "Texto de honestidade radical claro e acessível",
+        "Envio de sugestão gravando com sucesso na API"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-24",
-      "completed_at": "2026-09-24"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "TASK-021",
+      "title": "Integração Front-Back & Validação de Usabilidade",
+      "description": "Conexão total da UI aos endpoints da API, validação de carregamento e testes de fluxo completo no navegador.",
+      "status": "todo",
+      "milestone": "m4_frontend_ui",
+      "tier": "tier2_fast",
+      "indicators": [
+        "Fluxo ponta a ponta navegável sem erros de console",
+        "Tempo de carregamento inferior a 1.5s validado"
+      ],
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     },
     {
       "id": "TASK-022",
-      "title": "Protocolo de Narrativa & Storytelling e Regra de GitHub CLI no Marco 1",
-      "description": "Incorporar NARRATIVE_STORYTELLING_TEMPLATE.md com entrevista /grill-me passo a passo, atualizar AGENTS.md e templates com a regra imperativa de subir repositório privado no GitHub via CLI (gh repo create) desde a Fundação.",
-      "status": "done",
-      "milestone": "m1_fundacao",
-      "tier": "tier1_frontier",
+      "title": "Auditoria Estrita Tier 3 & Telemetria em analytics.json",
+      "description": "Auditoria minuciosa contra os 21 princípios, validação dos indicadores de cada tarefa e atualização dos dados de telemetria.",
+      "status": "todo",
+      "milestone": "m5_auditoria_growth",
+      "tier": "tier3_reviewer",
       "indicators": [
-        "Template NARRATIVE_STORYTELLING_TEMPLATE.md criado com roteiro passo a passo",
-        "AGENTS.md atualizado com as regras de Narrativa e GitHub CLI no Marco 1",
-        "DEPLOYMENT_GIT_PLAYBOOK_TEMPLATE.md atualizado com comando gh repo create",
-        "tasks_template.json e README.md sincronizados"
+        "Todos os 21 princípios atendidos",
+        "analytics.json preenchido com eventos de produto"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-25",
-      "completed_at": "2026-09-25"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     },
     {
       "id": "TASK-023",
-      "title": "Metodologia Sistêmica de Canvas e Cascata de Consistência para IA",
-      "description": "Criar VALUE_PROPOSITION_CANVAS_TEMPLATE.md com fit 1:1, reformular BUSINESS_MODEL_CANVAS_TEMPLATE.md com auditoria cruzada (Relacionamento x Canais, Atividades x Recursos x Parceiros) e formalizar a Cascata de Amarração Sistêmica no AGENTS.md para blindar a IA contra alucinações e lacunas operacionais.",
-      "status": "done",
-      "milestone": "m1_fundacao",
-      "tier": "tier1_frontier",
+      "title": "Deploy na Nuvem & Playbook de Lançamento",
+      "description": "Configuração da publicação contínua no Vercel/Render, documentação do DEPLOYMENT_GIT_PLAYBOOK.md e commit no GitHub.",
+      "status": "todo",
+      "milestone": "m5_auditoria_growth",
+      "tier": "tier2_fast",
       "indicators": [
-        "Template VALUE_PROPOSITION_CANVAS_TEMPLATE.md criado com amarração 1:1 de dores e ganhos",
-        "Template BUSINESS_MODEL_CANVAS_TEMPLATE.md atualizado com tabelas de rastreabilidade e auditoria compulsória",
-        "AGENTS.md atualizado com a Cascata Sistêmica (Narrativa -> VPC -> Canvas -> PRD -> Tasks)",
-        "README.md e templates de tarefas sincronizados"
+        "Aplicação online em URL pública",
+        "Repositório versionado com commits semânticos"
       ],
-      "audit_confirmed": true,
-      "created_at": "2026-09-25",
-      "completed_at": "2026-09-25"
+      "audit_confirmed": false,
+      "created_at": "2026-09-28"
     }
   ]
-}
-;
+};
