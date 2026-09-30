@@ -13,6 +13,8 @@ ENV/
 build/
 dist/
 *.egg-info/
+*.db
+.pytest_cache/
 
 # Node & Frontend
 node_modules/

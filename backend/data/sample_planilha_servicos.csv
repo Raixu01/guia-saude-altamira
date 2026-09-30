@@ -1,0 +1,7 @@
+categoria,titulo,responsavel,horario_funcionamento,endereco,bairro,whatsapp,maps_url,atendimento_domiciliar,tags,status_verificacao
+farmaceutico,Farmácia São Lucas,Dr. Marcos Vinicius (CRF-PA 3412),Aberto até 22h,Av. Djalma Dutra 840,Centro,5593991234567,"https://maps.google.com/?q=Av.+Djalma+Dutra+840+Altamira+PA",false,"Injetáveis com receita, Glicemia e Pressão, Nebulização",verificado
+farmaceutico,Drogaria Rio Xingu,Dra. Helena Souza (CRF-PA 2890),Plantão 24h,Rua 7 de Setembro 1205,Sudam I,5593992345678,"https://maps.google.com/?q=Rua+7+de+Setembro+1205+Altamira+PA",true,"Curativos Simples, Entrega Domiciliar, Plantão 24h",verificado
+enfermagem,Equipe Cuidar Xingu,Enf. Mariana Bastos (COREN-PA 218.440),Plantões de 6h a 12h,Atendimento domiciliar em toda Altamira,Sudam I,5593981122334,,true,"Retirada de pontos, Curativos a vácuo, Sondagem vesical, Antibióticos EV",verificado
+enfermagem,Pós-Cirúrgico & Reabilitação,Enf. Carlos Alberto (COREN-PA 195.320),Plantão Diurno e Noturno,Atendimento domiciliar,Centro,5593982233445,,true,"Pós-operatório, Suporte a acamados, Banho no leito",verificado
+cuidados,Viver Bem Idosos,Coord. Luciana Ribeiro,Escala Mensal ou Diárias,Atendimento em domicílio,Altamira,5593984567890,,true,"Cuidadores certificados, Suporte de rotina, Estimulação cognitiva",verificado
+cuidados,Fisioterapia Respiratória & Motora,Dra. Camila Nogueira (CREFITO-12 18920-F),Segunda a Sábado,Atendimento domiciliar com equipamentos portáteis,Centro,5593985671234,,true,"Reabilitação neurológica, Pós-trauma, Fisioterapia respiratória",verificado

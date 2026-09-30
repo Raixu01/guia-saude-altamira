@@ -3,11 +3,11 @@ window.__TASKS_DATA__ = {
     "name": "Guia de Saúde Altamira",
     "summary": "Guia público, mobile-first e regido pela honestidade radical para consulta de especialidades médicas e locais de exames em Altamira-PA, com conexão direta aos prestadores e indicação clara de incertezas.",
     "version": "1.0.0",
-    "last_updated": "2026-09-28",
+    "last_updated": "2026-09-30",
     "metrics": {
       "total_tasks": 23,
-      "completed_tasks": 11,
-      "progress_percentage": 48
+      "completed_tasks": 15,
+      "progress_percentage": 65
     }
   },
   "milestones": [
@@ -225,57 +225,61 @@ window.__TASKS_DATA__ = {
       "id": "TASK-012",
       "title": "Provisionamento do Ambiente Python & FastAPI",
       "description": "Configuração da pasta backend/ com uv/pip, FastAPI, Pydantic e uvicorn.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m3_backend_core",
       "tier": "tier2_fast",
       "indicators": [
         "Servidor FastAPI iniciando sem erros",
         "Documentação OpenAPI acessível em /docs"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-30"
     },
     {
       "id": "TASK-013",
       "title": "Script de Ingestão de Planilhas para o Banco de Dados",
       "description": "Construção de script CLI em Python para ler planilhas CSV/Excel locais e carregar no banco Supabase/PostgreSQL.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m3_backend_core",
       "tier": "tier2_fast",
       "indicators": [
         "Script processando planilhas com normalização de CRM e dados",
         "Carga realizada com integridade referencial testada"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-30"
     },
     {
       "id": "TASK-014",
       "title": "Endpoints REST da API de Consultas e Exames",
       "description": "Implementação das rotas assíncronas /api/especialidades, /api/profissionais, /api/exames e /api/correcoes.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m3_backend_core",
       "tier": "tier2_fast",
       "indicators": [
         "Rotas retornando JSON padronizado com paginação e filtros",
         "Validação de schemas com Pydantic"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-30"
     },
     {
       "id": "TASK-015",
       "title": "Testes Automatizados de Backend & Contratos",
       "description": "Criação e execução de suite de testes com pytest validando respostas da API e cenários de erro.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m3_backend_core",
       "tier": "tier3_reviewer",
       "indicators": [
         "100% dos testes executados com sucesso no terminal",
         "Zero falhas de contrato de dados"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-30"
     },
     {
       "id": "TASK-016",

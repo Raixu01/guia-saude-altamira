@@ -1,0 +1,18 @@
+nome_exame,categoria,letra_inicial,preparo_basico,estabelecimentos,status_confirmacao
+Ecocardiograma Transtorácico com Doppler,cardiologico,E,Não requer jejum prévio para Doppler. Trazer exames anteriores.,Centro Médico Xingu;Hospital Santo Agostinho,confirmado
+Eletrocardiograma (ECG),cardiologico,E,Repouso de 10 minutos antes da realização. Não usar cremes no peito.,Centro Médico Xingu;Hospital Santo Agostinho;Clínica do Coração,confirmado
+Endoscopia Digestiva Alta,digestivo,E,Jejum absoluto de 8 horas. Obrigatório comparecer com acompanhante maior de idade.,Hospital Santo Agostinho,confirmado
+Hemograma Completo,sangue,H,Jejum de 4 a 8 horas recomendado.,Laboratório Biomédico Altamira;Laboratório São Paulo,confirmado
+Glicemia em Jejum,sangue,G,Jejum estrito de 8 a 12 horas.,Laboratório Biomédico Altamira;Laboratório São Paulo,confirmado
+Tomografia Computadorizada,imagem,T,Jejum de 4 horas caso utilize contraste. Informar alergias.,Hospital Regional da Transamazônica;Clínica Radiológica do Xingu,confirmado
+Raio-X de Tórax,imagem,R,Retirar adornos metálicos no momento do exame.,Hospital Santo Agostinho;Clínica Radiológica do Xingu,confirmado
+Ultrassonografia Abdominal Total,imagem,U,Jejum de 6 horas e bexiga bem cheia.,Centro Médico Xingu;Clínica da Mulher,confirmado
+Ressonância Magnética,imagem,R,Retirar implantes ou adereços metálicos. Trazer laudos prévios.,Hospital Regional da Transamazônica,a_confirmar
+Colposcopia,ginecologico,C,Não utilizar cremes vaginais e não ter relações 48h antes.,Clínica da Mulher,confirmado
+Audiometria Tonal e Vocal,fonoaudiologia,A,Repouso auditivo de 14 horas antes do teste.,Centro Médico Xingu,confirmado
+Biópsia de Colo Uterino,ginecologico,B,Comparecer acompanhada e com exames citológicos anteriores.,Clínica da Mulher,confirmado
+Densitometria Óssea,imagem,D,Não ingerir comprimidos de cálcio no dia do exame.,Clínica Radiológica do Xingu,confirmado
+Mamografia Digital,imagem,M,Não usar desodorante ou talco na região das axilas no dia.,Clínica da Mulher;Clínica Radiológica do Xingu,confirmado
+Perfil Lipídico (Colesterol e Triglicerídeos),sangue,P,Jejum recomendado de 12 horas.,Laboratório Biomédico Altamira;Laboratório São Paulo,confirmado
+Urina Tipo 1 (EAS),sangue,U,Primeira urina da manhã com higiene prévia.,Laboratório Biomédico Altamira;Laboratório São Paulo,confirmado
+Teste Ergométrico,cardiologico,T,Usar tênis e roupa confortável para caminhada/corrida.,Clínica do Coração,confirmado
