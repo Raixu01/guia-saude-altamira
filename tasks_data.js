@@ -6,8 +6,8 @@ window.__TASKS_DATA__ = {
     "last_updated": "2026-09-30",
     "metrics": {
       "total_tasks": 23,
-      "completed_tasks": 15,
-      "progress_percentage": 65
+      "completed_tasks": 21,
+      "progress_percentage": 91
     }
   },
   "milestones": [
@@ -285,85 +285,91 @@ window.__TASKS_DATA__ = {
       "id": "TASK-016",
       "title": "Estrutura Base do Frontend Mobile-First",
       "description": "Configuração da pasta frontend/ com React/Next.js, Tailwind CSS e tokens do Design System.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m4_frontend_ui",
       "tier": "tier2_fast",
       "indicators": [
         "Build do front executando sem warnings críticos",
         "Layout mobile-first responsivo preparado"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-30"
     },
     {
       "id": "TASK-017",
       "title": "Tela Inicial Binária com Lupa Retrátil",
       "description": "Construção do componente da Home com os botões [ 🩺 Consulta ] e [ 🔬 Exames ] e campo de busca retrátil.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m4_frontend_ui",
       "tier": "tier2_fast",
       "indicators": [
         "Interface limpa e intuitiva idêntica à especificação",
         "Busca instantânea filtrando termos em tempo real"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-30"
     },
     {
       "id": "TASK-018",
       "title": "Árvore de Consultas & Cards de Contato Direto",
       "description": "Construção do fluxo Especialidades -> Lista de Profissionais -> Card com botão direto para WhatsApp com mensagem contextualizada.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m4_frontend_ui",
       "tier": "tier2_fast",
       "indicators": [
         "Navegação fluida sem travamento",
         "Badges de verificação exibidas em cada card"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-30"
     },
     {
       "id": "TASK-019",
       "title": "Índice Alfabético A-Z de Exames & Estabelecimentos",
       "description": "Construção do catálogo de exames com seletor alfabético e lista de clínicas/laboratórios com aviso de confirmação direta.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m4_frontend_ui",
       "tier": "tier2_fast",
       "indicators": [
         "Filtro por letra A-Z responsivo no smartphone",
         "Aviso de confirmação prévia evidente em cada exame"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-30"
     },
     {
       "id": "TASK-020",
       "title": "Tela de Transparência Radical & Modal de Sugestões",
       "description": "Página Como Funciona o Guia com declaração de limites legais e formulário simples para sugerir correções de contatos.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m4_frontend_ui",
       "tier": "tier2_fast",
       "indicators": [
         "Texto de honestidade radical claro e acessível",
         "Envio de sugestão gravando com sucesso na API"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-30"
     },
     {
       "id": "TASK-021",
       "title": "Integração Front-Back & Validação de Usabilidade",
       "description": "Conexão total da UI aos endpoints da API, validação de carregamento e testes de fluxo completo no navegador.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m4_frontend_ui",
       "tier": "tier2_fast",
       "indicators": [
         "Fluxo ponta a ponta navegável sem erros de console",
         "Tempo de carregamento inferior a 1.5s validado"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-09-30"
     },
     {
       "id": "TASK-022",
