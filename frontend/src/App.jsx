@@ -5,6 +5,7 @@ import HomeTab from "./components/HomeTab";
 import MedicosTab from "./components/MedicosTab";
 import ExamesTab from "./components/ExamesTab";
 import ServicosTab from "./components/ServicosTab";
+import CommunityUpdateFab from "./components/CommunityUpdateFab";
 import ModalSugestao from "./components/ModalSugestao";
 import ModalComoFunciona from "./components/ModalComoFunciona";
 
@@ -26,27 +27,21 @@ export default function App() {
       {/* Área Principal de Conteúdo */}
       <main className="flex-1 w-full pt-16 pb-24">
         {activeTab === "inicio" && (
-          <HomeTab
-            onNavigate={handleNavigate}
-            onOpenComoFunciona={() => setModalComoFuncionaOpen(true)}
-          />
+          <HomeTab onNavigate={handleNavigate} />
         )}
         {activeTab === "medicos" && (
-          <MedicosTab
-            onOpenSugestao={() => setModalSugestaoOpen(true)}
-          />
+          <MedicosTab onOpenSugestao={() => setModalSugestaoOpen(true)} />
         )}
         {activeTab === "exames" && (
-          <ExamesTab
-            onOpenSugestao={() => setModalSugestaoOpen(true)}
-          />
+          <ExamesTab onOpenSugestao={() => setModalSugestaoOpen(true)} />
         )}
         {activeTab === "servicos" && (
-          <ServicosTab
-            onOpenSugestao={() => setModalSugestaoOpen(true)}
-          />
+          <ServicosTab onOpenSugestao={() => setModalSugestaoOpen(true)} />
         )}
       </main>
+
+      {/* Botão Flutuante Global Comunitário: "Atualize o Guia" */}
+      <CommunityUpdateFab onClick={() => setModalSugestaoOpen(true)} />
 
       {/* Barra de Navegação Inferior Fixa */}
       <BottomNav activeTab={activeTab} onSelectTab={handleNavigate} />
@@ -58,7 +53,7 @@ export default function App() {
         onOpenSugestao={() => setModalSugestaoOpen(true)}
       />
 
-      {/* Modal de Colaboração Cidadã */}
+      {/* Modal de Colaboração Cidadã / Fale com a gente */}
       <ModalSugestao
         isOpen={modalSugestaoOpen}
         onClose={() => setModalSugestaoOpen(false)}
@@ -66,3 +61,4 @@ export default function App() {
     </div>
   );
 }
+

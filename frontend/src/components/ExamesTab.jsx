@@ -73,14 +73,11 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
       {/* Cabeçalho */}
       <div className="flex items-center justify-between pt-1">
         <div className="flex items-center gap-2">
-          <span className="material-symbols-outlined text-primary text-[24px]">science</span>
+          <span className="material-symbols-outlined text-[#005C55] text-[24px]">science</span>
           <h2 className="font-display font-bold text-[20px] text-on-surface">
             Catálogo de Exames
           </h2>
         </div>
-        <span className="text-[12px] font-semibold text-primary">
-          {exames.length} exames
-        </span>
       </div>
 
       {/* Campo de Busca Rápida */}
@@ -191,18 +188,12 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
                   className="flex items-center justify-between w-full p-4 text-left select-none hover:bg-surface-container-low transition-colors"
                 >
                   <div className="flex items-center gap-3 pr-2 min-w-0">
-                    <div className="w-9 h-9 rounded-xl bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 font-display font-bold text-[15px]">
+                    <div className="w-9 h-9 rounded-xl bg-[#D7F8EE] text-[#005C55] flex items-center justify-center flex-shrink-0 font-display font-bold text-[15px]">
                       {exame.letra_inicial}
                     </div>
-                    <div className="flex flex-col min-w-0">
-                      <span className="font-display font-bold text-[15px] text-on-surface leading-snug">
-                        {exame.nome}
-                      </span>
-                      <span className="text-[11px] text-on-surface-variant capitalize mt-0.5">
-                        {exame.estabelecimentos?.length || 0}{" "}
-                        {exame.estabelecimentos?.length === 1 ? "local disponível" : "locais disponíveis"}
-                      </span>
-                    </div>
+                    <span className="font-display font-bold text-[15px] text-on-surface leading-snug">
+                      {exame.nome}
+                    </span>
                   </div>
                   <div
                     className={`w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant transition-transform duration-200 flex-shrink-0 ${

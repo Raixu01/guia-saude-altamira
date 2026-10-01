@@ -111,9 +111,6 @@ export default function MedicosTab({ initialSearch = "", onOpenSugestao }) {
             <h2 className="font-display font-bold text-[20px] text-on-surface">
               Especialidades Médicas
             </h2>
-            <span className="text-[12px] font-semibold text-primary">
-              {especialidades.length} áreas
-            </span>
           </div>
 
           <div className="flex flex-col gap-2.5">
@@ -121,24 +118,17 @@ export default function MedicosTab({ initialSearch = "", onOpenSugestao }) {
               <button
                 key={esp.id}
                 onClick={() => selecionarEspecialidade(esp)}
-                className="flex items-center justify-between w-full p-3.5 rounded-2xl bg-white shadow-soft hover:bg-surface-container-low transition-all active:scale-[0.98] border border-outline-variant/30 text-left"
+                className="flex items-center justify-between w-full p-3.5 rounded-2xl bg-white shadow-soft hover:bg-surface-container-low transition-all active:scale-[0.985] border border-outline-variant/30 text-left"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                  <div className="w-11 h-11 rounded-xl bg-[#D7F8EE] text-[#005C55] flex items-center justify-center flex-shrink-0">
                     <span className="material-symbols-outlined text-[24px]">
                       {esp.icone || "medical_services"}
                     </span>
                   </div>
-                  <div className="flex flex-col">
-                    <span className="font-display font-bold text-[16px] text-on-surface leading-snug">
-                      {esp.nome}
-                    </span>
-                    <span className="text-[12px] text-on-surface-variant">
-                      {esp.total_profissionais === 1
-                        ? "1 profissional disponível"
-                        : `${esp.total_profissionais} profissionais disponíveis`}
-                    </span>
-                  </div>
+                  <span className="font-display font-bold text-[16px] text-on-surface leading-snug">
+                    {esp.nome}
+                  </span>
                 </div>
                 <span className="material-symbols-outlined text-outline-variant text-[20px]">
                   chevron_right

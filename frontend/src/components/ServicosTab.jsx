@@ -75,16 +75,13 @@ export default function ServicosTab({ onOpenSugestao }) {
       {/* Cabeçalho */}
       <div className="flex items-center justify-between pt-1">
         <div className="flex items-center gap-2">
-          <span className="material-symbols-outlined text-primary text-[24px]">
+          <span className="material-symbols-outlined text-[#005C55] text-[24px]">
             medical_services
           </span>
           <h2 className="font-display font-bold text-[20px] text-on-surface">
             Serviços de Saúde
           </h2>
         </div>
-        <span className="text-[12px] font-semibold text-primary">
-          {servicos.length} disponíveis
-        </span>
       </div>
 
       {/* Busca Rápida de Serviços */}
@@ -145,20 +142,14 @@ export default function ServicosTab({ onOpenSugestao }) {
                   className="w-full p-4 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors active:scale-[0.99]"
                 >
                   <div className="flex items-center gap-3 pr-2 min-w-0">
-                    <div className="w-11 h-11 rounded-2xl bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0">
+                    <div className="w-11 h-11 rounded-2xl bg-[#D7F8EE] text-[#005C55] flex items-center justify-center flex-shrink-0">
                       <span className="material-symbols-outlined text-[24px]">
                         {cat.icone}
                       </span>
                     </div>
-                    <div className="flex flex-col min-w-0">
-                      <h3 className="font-display font-bold text-[16px] text-on-surface leading-tight">
-                        {cat.titulo}
-                      </h3>
-                      <p className="text-[11.5px] text-on-surface-variant truncate mt-0.5">
-                        {servicosDaCategoria.length}{" "}
-                        {servicosDaCategoria.length === 1 ? "opção em Altamira" : "opções em Altamira"}
-                      </p>
-                    </div>
+                    <h3 className="font-display font-bold text-[16px] text-on-surface leading-tight">
+                      {cat.titulo}
+                    </h3>
                   </div>
                   <div
                     className={`w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant transition-transform duration-200 flex-shrink-0 ${
@@ -175,7 +166,10 @@ export default function ServicosTab({ onOpenSugestao }) {
                 {isOpen && (
                   <div className="p-3.5 pt-1 flex flex-col gap-3 border-t border-outline-variant/20 bg-surface/30">
                     {servicosDaCategoria.map((serv) => {
-                      const tagsList = serv.tags ? serv.tags.split(",").map((t) => t.trim()) : [];
+                      const allTags = serv.tags ? serv.tags.split(",").map((t) => t.trim()).filter(Boolean) : [];
+                      const visibleTags = allTags.slice(0, 3);
+                      const extraCount = allTags.length - visibleTags.length;
+
                       return (
                         <article
                           key={serv.id}
@@ -213,10 +207,10 @@ export default function ServicosTab({ onOpenSugestao }) {
                             )}
                           </div>
 
-                          {/* Tags de Serviços Oferecidos */}
-                          {tagsList.length > 0 && (
-                            <div className="flex flex-wrap gap-1">
-                              {tagsList.map((tag, i) => (
+                          {/* Tags de Serviços Oferecidos (Máximo 3 tags + contador) */}
+                          {visibleTags.length > 0 && (
+                            <div className="flex flex-wrap gap-1 items-center">
+                              {visibleTags.map((tag, i) => (
                                 <span
                                   key={i}
                                   className="px-2 py-0.5 rounded-md bg-surface-container text-on-surface text-[11px] font-medium flex items-center gap-1"
@@ -225,6 +219,11 @@ export default function ServicosTab({ onOpenSugestao }) {
                                   {tag}
                                 </span>
                               ))}
+                              {extraCount > 0 && (
+                                <span className="px-1.5 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant text-[10.5px] font-semibold">
+                                  +{extraCount}
+                                </span>
+                              )}
                             </div>
                           )}
 
