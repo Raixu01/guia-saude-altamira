@@ -263,12 +263,12 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
                               )}
                             </div>
 
-                            {/* Botão de contato direto */}
+                            {/* Botão de contato direto (Tom Teal da primeira tela) */}
                             <a
                               href={buildWhatsappExameUrl(zapNumber, exame.nome, est.nome)}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="w-full min-h-[44px] rounded-xl bg-[#25D366] hover:bg-[#20BA59] text-white font-bold text-[13px] flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-sm"
+                              className="w-full min-h-[44px] rounded-xl bg-[#005C55] hover:bg-[#0F766E] text-white font-bold text-[13px] flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-sm"
                             >
                               <span className="material-symbols-outlined text-[18px]">chat</span>
                               <span>Falar com {est.nome}</span>

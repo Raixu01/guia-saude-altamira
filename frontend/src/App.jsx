@@ -21,8 +21,8 @@ export default function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-surface font-sans text-on-surface antialiased selection:bg-primary/20 selection:text-primary">
-      {/* Top Header Fixo Consolidado */}
-      <Header />
+      {/* Top Header Fixo Consolidado com Logo em Todas as Telas */}
+      <Header onLogoClick={() => handleNavigate("inicio")} />
 
       {/* Área Principal de Conteúdo */}
       <main className="flex-1 w-full pt-16 pb-24">

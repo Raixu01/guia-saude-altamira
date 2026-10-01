@@ -10,71 +10,69 @@ export default function HomeTab({ onNavigate }) {
         </h2>
       </div>
 
-      {/* 3 Cartões de Navegação */}
+      {/* 3 Cartões de Navegação (Brancos por padrão, mudam para cor de seleção ao clicar) */}
       <div className="flex flex-col gap-3">
-        {/* Opção 1: Consultas médicas (Cartão Herói com Gradiente Profundo e Ícone Teal Escuro) */}
+        {/* Opção 1: Consultas médicas */}
         <button
           onClick={() => onNavigate("medicos")}
-          className="group relative min-h-[104px] overflow-hidden rounded-3xl bg-[linear-gradient(135deg,#005C55_0%,#0F766E_58%,#15998E_100%)] p-5 text-left shadow-[0_14px_30px_rgba(0,92,85,0.20)] transition duration-200 active:scale-[0.985]"
+          className="group relative min-h-[88px] flex items-center justify-between p-4.5 rounded-[20px] bg-white text-on-surface shadow-card active:scale-[0.985] active:bg-[#005C55] active:text-white transition-all border border-[#E2E8F0] hover:border-[#005C55]/30 text-left cursor-pointer"
         >
-          <span className="absolute -right-10 -top-12 h-40 w-40 rounded-full bg-[#8CF2D5]/25 blur-2xl" />
-          <span className="absolute -bottom-8 right-16 h-24 w-24 rounded-full border border-white/15" />
-          <div className="relative z-10 flex items-center justify-between gap-4">
-            <div className="flex items-center gap-4">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#D7F8EE] shadow-[inset_0_1px_0_rgba(255,255,255,.65)] flex-shrink-0">
-                <span className="material-symbols-outlined text-[29px] text-[#005C55]">
-                  stethoscope
-                </span>
-              </div>
-              <span className="font-display text-[20px] font-bold tracking-tight text-white leading-tight">
-                Consultas médicas
+          <div className="flex items-center gap-3.5">
+            <div className="w-13 h-13 rounded-2xl bg-[#D7F8EE] flex items-center justify-center flex-shrink-0 group-active:bg-white/20 transition-colors">
+              <span className="material-symbols-outlined text-[#005C55] group-active:text-white text-[27px] transition-colors">
+                stethoscope
               </span>
             </div>
-            <span className="material-symbols-outlined text-[24px] text-white/90 transition-transform duration-200 group-hover:translate-x-1 flex-shrink-0">
+            <span className="font-display font-bold text-[18px] text-on-surface group-active:text-white leading-tight transition-colors">
+              Consultas médicas
+            </span>
+          </div>
+          <div className="w-9 h-9 rounded-full bg-surface-container group-active:bg-white/20 flex items-center justify-center flex-shrink-0 group-hover:translate-x-0.5 transition-all">
+            <span className="material-symbols-outlined text-primary group-active:text-white text-[22px] transition-colors">
               arrow_forward
             </span>
           </div>
         </button>
 
-        {/* Opção 2: Exames (Fundo Branco + Bloco Menta/Lavanda) */}
+        {/* Opção 2: Exames */}
         <button
           onClick={() => onNavigate("exames")}
-          className="group relative min-h-[88px] flex items-center justify-between p-4.5 rounded-[20px] bg-white text-on-surface shadow-card active:scale-[0.985] transition-all border border-[#E2E8F0] text-left"
+          className="group relative min-h-[88px] flex items-center justify-between p-4.5 rounded-[20px] bg-white text-on-surface shadow-card active:scale-[0.985] active:bg-[#005C55] active:text-white transition-all border border-[#E2E8F0] hover:border-[#005C55]/30 text-left cursor-pointer"
         >
           <div className="flex items-center gap-3.5">
-            <div className="w-13 h-13 rounded-2xl bg-[#D7F8EE] flex items-center justify-center flex-shrink-0">
-              <span className="material-symbols-outlined text-[#005C55] text-[27px]">
+            <div className="w-13 h-13 rounded-2xl bg-[#D7F8EE] flex items-center justify-center flex-shrink-0 group-active:bg-white/20 transition-colors">
+              <span className="material-symbols-outlined text-[#005C55] group-active:text-white text-[27px] transition-colors">
                 science
               </span>
             </div>
-            <span className="font-display font-bold text-[18px] text-on-surface leading-tight">
+            <span className="font-display font-bold text-[18px] text-on-surface group-active:text-white leading-tight transition-colors">
               Exames
             </span>
           </div>
-          <div className="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 group-hover:translate-x-0.5 transition-transform">
-            <span className="material-symbols-outlined text-primary text-[22px]">
+          <div className="w-9 h-9 rounded-full bg-surface-container group-active:bg-white/20 flex items-center justify-center flex-shrink-0 group-hover:translate-x-0.5 transition-all">
+            <span className="material-symbols-outlined text-primary group-active:text-white text-[22px] transition-colors">
               arrow_forward
             </span>
           </div>
         </button>
 
-        {/* Opção 3: Serviços (Fundo Branco + Bloco Menta/Lavanda) */}
+        {/* Opção 3: Serviços */}
         <button
           onClick={() => onNavigate("servicos")}
-          className="group relative min-h-[88px] flex items-center justify-between p-4.5 rounded-[20px] bg-white text-on-surface shadow-card active:scale-[0.985] transition-all border border-[#E2E8F0] text-left"
+          className="group relative min-h-[88px] flex items-center justify-between p-4.5 rounded-[20px] bg-white text-on-surface shadow-card active:scale-[0.985] active:bg-[#005C55] active:text-white transition-all border border-[#E2E8F0] hover:border-[#005C55]/30 text-left cursor-pointer"
         >
           <div className="flex items-center gap-3.5">
-            <div className="w-13 h-13 rounded-2xl bg-[#D7F8EE] flex items-center justify-center flex-shrink-0">
-              <span className="material-symbols-outlined text-[#005C55] text-[27px]">
+            <div className="w-13 h-13 rounded-2xl bg-[#D7F8EE] flex items-center justify-center flex-shrink-0 group-active:bg-white/20 transition-colors">
+              <span className="material-symbols-outlined text-[#005C55] group-active:text-white text-[27px] transition-colors">
                 medical_services
               </span>
             </div>
-            <span className="font-display font-bold text-[18px] text-on-surface leading-tight">
+            <span className="font-display font-bold text-[18px] text-on-surface group-active:text-white leading-tight transition-colors">
               Serviços
             </span>
           </div>
-          <div className="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 group-hover:translate-x-0.5 transition-transform">
-            <span className="material-symbols-outlined text-primary text-[22px]">
+          <div className="w-9 h-9 rounded-full bg-surface-container group-active:bg-white/20 flex items-center justify-center flex-shrink-0 group-hover:translate-x-0.5 transition-all">
+            <span className="material-symbols-outlined text-primary group-active:text-white text-[22px] transition-colors">
               arrow_forward
             </span>
           </div>

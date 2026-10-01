@@ -35,12 +35,16 @@ export default function ModalSugestao({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/50 backdrop-blur-sm animate-fadeIn">
       <div className="w-full max-w-md bg-white rounded-t-3xl sm:rounded-3xl p-6 shadow-2xl flex flex-col gap-4 border border-outline-variant/30 max-h-[90vh] overflow-y-auto animate-tab-enter">
-        {/* Topo do Modal */}
+        {/* Topo do Modal com Logo */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary text-[24px]">
-              campaign
-            </span>
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-xl bg-white border border-outline-variant/30 flex items-center justify-center p-1 shadow-xs flex-shrink-0">
+              <img
+                src="/logo.svg"
+                alt="Pulso Saúde"
+                className="w-full h-full object-contain"
+              />
+            </div>
             <h3 className="font-display font-bold text-[19px] text-on-surface">
               Fale com a gente
             </h3>

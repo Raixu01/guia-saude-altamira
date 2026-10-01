@@ -6,12 +6,16 @@ export default function ModalComoFunciona({ isOpen, onClose, onOpenSugestao }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fadeIn">
       <div className="w-full max-w-md bg-white rounded-3xl p-6 shadow-2xl flex flex-col gap-4 border border-outline-variant/30 max-h-[85vh] overflow-y-auto">
-        {/* Topo */}
+        {/* Topo com Logo */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary text-[24px]">
-              policy
-            </span>
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-xl bg-white border border-outline-variant/30 flex items-center justify-center p-1 shadow-xs flex-shrink-0">
+              <img
+                src="/logo.svg"
+                alt="Pulso Saúde"
+                className="w-full h-full object-contain"
+              />
+            </div>
             <h3 className="font-display font-bold text-[18px] text-on-surface">
               Como Funciona o Guia
             </h3>
