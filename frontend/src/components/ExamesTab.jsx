@@ -30,7 +30,6 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
     try {
       const data = await api.getExames(letra, termo);
       setExames(data);
-      // Abre o primeiro automaticamente se tiver poucos
       if (data.length > 0 && !exameAbertoId) {
         setExameAbertoId(data[0].id);
       }
@@ -62,17 +61,17 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
   }
 
   function buildWhatsappExameUrl(numero, nomeExame, nomeLab) {
-    const numLimpo = numero.replace(/\D/g, "");
+    const numLimpo = numero ? numero.replace(/\D/g, "") : "5593999999999";
     const msg = encodeURIComponent(
-      `Olá! Encontrei o contato pelo Guia de Saúde de Altamira e gostaria de informações sobre preparo, valor e agendamento para o exame: ${nomeExame}.`
+      `Olá! Encontrei o contato pelo Guia de Saúde de Altamira e gostaria de confirmar valores, preparo e agendamento para o exame: ${nomeExame}.`
     );
     return `https://wa.me/${numLimpo}?text=${msg}`;
   }
 
   return (
-    <div className="flex flex-col w-full px-4 pt-4 pb-12 max-w-lg mx-auto gap-4">
+    <div className="flex flex-col w-full px-4 pt-3 pb-12 max-w-lg mx-auto gap-4 animate-tab-enter">
       {/* Cabeçalho */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between pt-1">
         <div className="flex items-center gap-2">
           <span className="material-symbols-outlined text-primary text-[24px]">science</span>
           <h2 className="font-display font-bold text-[20px] text-on-surface">
@@ -93,8 +92,8 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
           type="search"
           value={busca}
           onChange={handleBuscaChange}
-          placeholder="Digite o nome do exame (ex: Ecocardiograma, Hemograma...)"
-          className="w-full h-12 pl-11 pr-11 bg-white rounded-2xl text-[14px] text-on-surface placeholder:text-on-surface-variant/70 shadow-soft border border-outline-variant/40 focus:outline-none focus:ring-2 focus:ring-primary"
+          placeholder="Digite o nome do exame (ex: Ecocardiograma, Sangue...)"
+          className="w-full h-12 pl-11 pr-11 bg-white rounded-2xl text-[14px] text-on-surface placeholder:text-on-surface-variant/70 shadow-soft border border-outline-variant/30 focus:outline-none focus:ring-2 focus:ring-primary"
         />
         {busca && (
           <button
@@ -103,14 +102,14 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
               setBusca("");
               carregarExames(letraAtiva, "");
             }}
-            className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-on-surface-variant"
+            className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-on-surface-variant hover:text-on-surface"
           >
             <span className="material-symbols-outlined text-[18px]">cancel</span>
           </button>
         )}
       </div>
 
-      {/* Seletor Alfabético A-Z em Carrossel Horizontal */}
+      {/* Seletor Alfabético A-Z Otimizado */}
       <div className="flex flex-col gap-1 -mx-4 px-4">
         <div className="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-none">
           <button
@@ -118,10 +117,10 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
               setLetraAtiva("");
               carregarExames("", busca);
             }}
-            className={`h-10 min-w-[42px] px-2.5 rounded-xl flex items-center justify-center font-display font-bold text-[13px] transition-all ${
+            className={`h-9 px-3 rounded-xl flex items-center justify-center font-display font-bold text-[12px] transition-all flex-shrink-0 ${
               !letraAtiva
-                ? "bg-primary text-white shadow-md scale-105"
-                : "bg-white text-on-surface-variant shadow-sm border border-outline-variant/30 hover:bg-surface-container"
+                ? "bg-primary text-white shadow-sm"
+                : "bg-white text-on-surface-variant border border-outline-variant/30 hover:bg-surface-container"
             }`}
           >
             Todos
@@ -129,22 +128,22 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
           {alfabeto.map((letra) => {
             const isActive = letraAtiva === letra;
             const count = indiceAlfabetico[letra] || 0;
+            const hasExams = count > 0;
+
             return (
               <button
                 key={letra}
+                disabled={!hasExams && !busca}
                 onClick={() => handleLetraClick(letra)}
-                className={`h-10 min-w-[38px] px-2 rounded-xl flex items-center justify-center font-display font-bold text-[14px] transition-all relative ${
+                className={`h-9 min-w-[34px] px-1.5 rounded-xl flex items-center justify-center font-display font-bold text-[13px] transition-all relative flex-shrink-0 ${
                   isActive
-                    ? "bg-primary text-white shadow-md scale-105"
-                    : count > 0
-                    ? "bg-white text-on-surface shadow-sm border border-outline-variant/40 hover:bg-surface-container"
-                    : "bg-surface-container/50 text-outline-variant opacity-60"
+                    ? "bg-primary text-white shadow-md ring-2 ring-primary/20 scale-105"
+                    : hasExams
+                    ? "bg-white text-on-surface shadow-sm border border-outline-variant/30 hover:bg-surface-container"
+                    : "bg-surface-container/30 text-outline-variant opacity-30 cursor-not-allowed"
                 }`}
               >
                 {letra}
-                {count > 0 && !isActive && (
-                  <span className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-primary" />
-                )}
               </button>
             );
           })}
@@ -153,11 +152,10 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
 
       {/* Lista de Exames em Acordeão */}
       {carregando ? (
-        <div className="py-12 flex flex-col items-center justify-center text-on-surface-variant gap-2">
-          <span className="material-symbols-outlined animate-spin text-[32px] text-primary">
-            progress_activity
-          </span>
-          <span className="text-[13px]">Buscando exames...</span>
+        <div className="flex flex-col gap-3">
+          {[1, 2, 3, 4].map((n) => (
+            <div key={n} className="w-full h-18 bg-white rounded-2xl p-4 skeleton-box" />
+          ))}
         </div>
       ) : exames.length === 0 ? (
         <div className="p-8 text-center bg-white rounded-3xl border border-outline-variant/30 flex flex-col items-center gap-3">
@@ -172,7 +170,7 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
           </p>
           <button
             onClick={onOpenSugestao}
-            className="mt-1 px-4 py-2 rounded-xl bg-primary text-white font-bold text-[13px]"
+            className="mt-1 px-4 py-2 rounded-xl bg-primary text-white font-bold text-[13px] active:scale-[0.98]"
           >
             Sugerir Exame
           </button>
@@ -193,15 +191,16 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
                   className="flex items-center justify-between w-full p-4 text-left select-none hover:bg-surface-container-low transition-colors"
                 >
                   <div className="flex items-center gap-3 pr-2 min-w-0">
-                    <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 font-display font-bold text-[15px]">
+                    <div className="w-9 h-9 rounded-xl bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0 font-display font-bold text-[15px]">
                       {exame.letra_inicial}
                     </div>
                     <div className="flex flex-col min-w-0">
-                      <span className="font-display font-bold text-[15px] text-on-surface leading-tight">
+                      <span className="font-display font-bold text-[15px] text-on-surface leading-snug">
                         {exame.nome}
                       </span>
                       <span className="text-[11px] text-on-surface-variant capitalize mt-0.5">
-                        Categoria: {exame.categoria} • {exame.estabelecimentos?.length || 0} locais
+                        {exame.estabelecimentos?.length || 0}{" "}
+                        {exame.estabelecimentos?.length === 1 ? "local disponível" : "locais disponíveis"}
                       </span>
                     </div>
                   </div>
@@ -216,30 +215,35 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
                   </div>
                 </button>
 
-                {/* Conteúdo Expansível com Locais e Orientações */}
+                {/* Conteúdo Expansível com Aviso Prévia e Locais */}
                 {isOpen && (
-                  <div className="px-4 pb-4 pt-1 flex flex-col gap-3 border-t border-outline-variant/20 bg-surface/30">
-                    {/* Preparo Básico */}
-                    {exame.preparo_basico && (
-                      <div className="p-3 rounded-xl bg-amber-50/80 border border-amber-200/80 text-[12px] text-amber-900 flex items-start gap-2">
-                        <span className="material-symbols-outlined text-[16px] text-amber-700 flex-shrink-0 mt-0.5">
-                          info
-                        </span>
-                        <div>
-                          <span className="font-bold">Aviso de Preparo: </span>
-                          {exame.preparo_basico}
-                        </div>
+                  <div className="px-4 pb-4 pt-1 flex flex-col gap-3 border-t border-outline-variant/20 bg-surface/40">
+                    {/* Aviso Obrigatório Antes da Lista de Laboratórios */}
+                    <div className="p-3 rounded-xl bg-amber-50/90 border border-amber-200 text-[12px] text-amber-900 flex items-start gap-2">
+                      <span className="material-symbols-outlined text-[17px] text-amber-700 flex-shrink-0 mt-0.5">
+                        info
+                      </span>
+                      <div className="leading-snug">
+                        <strong className="font-semibold block mb-0.5">Confirmação Prévia:</strong>
+                        Confirme valor, preparo, disponibilidade e horário diretamente com o local.
+                        {exame.preparo_basico && (
+                          <div className="mt-1 pt-1 border-t border-amber-200/60 text-[11.5px]">
+                            <strong>Preparo padrão: </strong>{exame.preparo_basico}
+                          </div>
+                        )}
                       </div>
-                    )}
+                    </div>
 
-                    {/* Lista de Estabelecimentos */}
+                    {/* Lista de Estabelecimentos com Status Específico */}
                     <div className="flex flex-col gap-2">
                       <span className="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">
-                        Onde fazer em Altamira:
+                        Onde realizar em Altamira:
                       </span>
                       {exame.estabelecimentos?.map((item, idx) => {
                         const est = item.estabelecimento;
                         const zapNumber = est?.whatsapp || "5593999999999";
+                        const isConfirmado = item.status_confirmacao === "confirmado";
+
                         return (
                           <div
                             key={idx}
@@ -251,15 +255,21 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
                                   {est.nome}
                                 </span>
                                 <div className="flex items-center gap-1 text-[12px] text-on-surface-variant mt-0.5">
-                                  <span className="material-symbols-outlined text-[14px] text-primary">
+                                  <span className="material-symbols-outlined text-[14px] text-primary flex-shrink-0">
                                     location_on
                                   </span>
                                   <span>{est.endereco}</span>
                                 </div>
                               </div>
-                              <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200 flex-shrink-0">
-                                Confirmado
-                              </span>
+                              {isConfirmado ? (
+                                <span className="text-[10.5px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200 flex-shrink-0">
+                                  Confirmado no local
+                                </span>
+                              ) : (
+                                <span className="text-[10.5px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200 flex-shrink-0">
+                                  A confirmar
+                                </span>
+                              )}
                             </div>
 
                             {/* Botão de contato direto */}
@@ -267,7 +277,7 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
                               href={buildWhatsappExameUrl(zapNumber, exame.nome, est.nome)}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="w-full min-h-[44px] rounded-xl bg-[#25D366] hover:bg-[#20BA59] text-white font-bold text-[13px] flex items-center justify-center gap-2 active:scale-98 transition-all shadow-sm"
+                              className="w-full min-h-[44px] rounded-xl bg-[#25D366] hover:bg-[#20BA59] text-white font-bold text-[13px] flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-sm"
                             >
                               <span className="material-symbols-outlined text-[18px]">chat</span>
                               <span>Falar com {est.nome}</span>

@@ -3,25 +3,44 @@ import { api } from "../api";
 
 export default function ServicosTab({ onOpenSugestao }) {
   const [servicos, setServicos] = useState([]);
-  const [categoriaAtiva, setCategoriaAtiva] = useState("todos");
   const [busca, setBusca] = useState("");
   const [carregando, setCarregando] = useState(false);
+  // Estado para os blocos de intenção expansíveis (iniciam abertos ou sob clique)
+  const [categoriaAberta, setCategoriaAberta] = useState({
+    farmaceutico: true,
+    enfermagem: true,
+    cuidados: true,
+  });
 
   const categorias = [
-    { id: "todos", label: "Todos", icon: "select_all" },
-    { id: "farmaceutico", label: "Farmácias 24h", icon: "local_pharmacy" },
-    { id: "enfermagem", label: "Home Care & Enfermagem", icon: "medical_services" },
-    { id: "cuidados", label: "Cuidadores & Fisioterapia", icon: "elderly" },
+    {
+      id: "farmaceutico",
+      titulo: "Serviços Farmacêuticos",
+      subtitulo: "Farmácias de plantão, injetáveis, nebulização e teste de glicemia",
+      icone: "local_pharmacy",
+    },
+    {
+      id: "enfermagem",
+      titulo: "Assistência de Enfermagem",
+      subtitulo: "Home care, curativos especiais, retirada de pontos e sondagem",
+      icone: "medical_services",
+    },
+    {
+      id: "cuidados",
+      titulo: "Cuidados e Acompanhamento",
+      subtitulo: "Cuidadores de idosos e fisioterapia respiratória em domicílio",
+      icone: "elderly",
+    },
   ];
 
   useEffect(() => {
-    carregarServicos("todos", "");
+    carregarServicos();
   }, []);
 
-  async function carregarServicos(cat, termo) {
+  async function carregarServicos(termo = "") {
     setCarregando(true);
     try {
-      const data = await api.getServicos(cat, termo);
+      const data = await api.getServicos("todos", termo);
       setServicos(data);
     } catch (err) {
       console.error(err);
@@ -30,19 +49,21 @@ export default function ServicosTab({ onOpenSugestao }) {
     }
   }
 
-  function handleCategoriaClick(catId) {
-    setCategoriaAtiva(catId);
-    carregarServicos(catId, busca);
-  }
-
   function handleBuscaChange(e) {
     const val = e.target.value;
     setBusca(val);
-    carregarServicos(categoriaAtiva, val);
+    carregarServicos(val);
+  }
+
+  function toggleCategoria(catId) {
+    setCategoriaAberta((prev) => ({
+      ...prev,
+      [catId]: !prev[catId],
+    }));
   }
 
   function buildWhatsappServicoUrl(numero, titulo) {
-    const numLimpo = numero.replace(/\D/g, "");
+    const numLimpo = numero ? numero.replace(/\D/g, "") : "5593999999999";
     const msg = encodeURIComponent(
       `Olá! Encontrei o contato do ${titulo} pelo Guia de Saúde de Altamira e gostaria de informações sobre atendimento.`
     );
@@ -50,9 +71,9 @@ export default function ServicosTab({ onOpenSugestao }) {
   }
 
   return (
-    <div className="flex flex-col w-full px-4 pt-4 pb-12 max-w-lg mx-auto gap-4">
+    <div className="flex flex-col w-full px-4 pt-3 pb-12 max-w-lg mx-auto gap-4 animate-tab-enter">
       {/* Cabeçalho */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between pt-1">
         <div className="flex items-center gap-2">
           <span className="material-symbols-outlined text-primary text-[24px]">
             medical_services
@@ -62,11 +83,11 @@ export default function ServicosTab({ onOpenSugestao }) {
           </h2>
         </div>
         <span className="text-[12px] font-semibold text-primary">
-          {servicos.length} cadastrados
+          {servicos.length} disponíveis
         </span>
       </div>
 
-      {/* Busca */}
+      {/* Busca Rápida de Serviços */}
       <div className="relative w-full">
         <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
           <span className="material-symbols-outlined text-[20px]">search</span>
@@ -76,180 +97,188 @@ export default function ServicosTab({ onOpenSugestao }) {
           value={busca}
           onChange={handleBuscaChange}
           placeholder="Busque por farmácia, cuidador, curativos..."
-          className="w-full h-12 pl-11 pr-11 bg-white rounded-2xl text-[14px] text-on-surface placeholder:text-on-surface-variant/70 shadow-soft border border-outline-variant/40 focus:outline-none focus:ring-2 focus:ring-primary"
+          className="w-full h-12 pl-11 pr-11 bg-white rounded-2xl text-[14px] text-on-surface placeholder:text-on-surface-variant/70 shadow-soft border border-outline-variant/30 focus:outline-none focus:ring-2 focus:ring-primary"
         />
         {busca && (
           <button
             type="button"
             onClick={() => {
               setBusca("");
-              carregarServicos(categoriaAtiva, "");
+              carregarServicos("");
             }}
-            className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-on-surface-variant"
+            className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-on-surface-variant hover:text-on-surface"
           >
             <span className="material-symbols-outlined text-[18px]">cancel</span>
           </button>
         )}
       </div>
 
-      {/* Pílulas de Filtro de Categoria */}
-      <div className="flex items-center gap-2 overflow-x-auto py-1 -mx-4 px-4 scrollbar-none">
-        {categorias.map((cat) => {
-          const isActive = categoriaAtiva === cat.id;
-          return (
-            <button
-              key={cat.id}
-              onClick={() => handleCategoriaClick(cat.id)}
-              className={`h-10 px-3.5 rounded-xl flex items-center gap-1.5 font-display font-bold text-[12px] whitespace-nowrap transition-all ${
-                isActive
-                  ? "bg-primary text-white shadow-md scale-102"
-                  : "bg-white text-on-surface-variant border border-outline-variant/40 hover:bg-surface-container shadow-sm"
-              }`}
-            >
-              <span className="material-symbols-outlined text-[18px]">
-                {cat.icon}
-              </span>
-              <span>{cat.label}</span>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Listagem de Serviços */}
+      {/* Skeletons de carregamento */}
       {carregando ? (
-        <div className="py-12 flex flex-col items-center justify-center text-on-surface-variant gap-2">
-          <span className="material-symbols-outlined animate-spin text-[32px] text-primary">
-            progress_activity
-          </span>
-          <span className="text-[13px]">Carregando serviços...</span>
-        </div>
-      ) : servicos.length === 0 ? (
-        <div className="p-8 text-center bg-white rounded-3xl border border-outline-variant/30 flex flex-col items-center gap-3">
-          <span className="material-symbols-outlined text-[40px] text-on-surface-variant">
-            handshake
-          </span>
-          <span className="font-bold text-[16px] text-on-surface">
-            Nenhum serviço encontrado
-          </span>
-          <p className="text-[12px] text-on-surface-variant">
-            Você atua na área da saúde em Altamira? Cadastre seu serviço gratuitamente.
-          </p>
-          <button
-            onClick={onOpenSugestao}
-            className="mt-1 px-4 py-2 rounded-xl bg-primary text-white font-bold text-[13px]"
-          >
-            Cadastrar Serviço
-          </button>
+        <div className="flex flex-col gap-3">
+          {[1, 2, 3].map((n) => (
+            <div key={n} className="w-full h-24 bg-white rounded-3xl skeleton-box" />
+          ))}
         </div>
       ) : (
-        <div className="flex flex-col gap-3.5">
-          {servicos.map((serv) => {
-            const tagsList = serv.tags ? serv.tags.split(",").map((t) => t.trim()) : [];
-            const isFarmacia = serv.categoria === "farmaceutico";
+        /* Blocos de Intenção Verticais (Padrão Stitch) */
+        <div className="flex flex-col gap-4">
+          {categorias.map((cat) => {
+            const servicosDaCategoria = servicos.filter(
+              (s) => s.categoria === cat.id
+            );
+            const isOpen = categoriaAberta[cat.id];
+
+            if (busca && servicosDaCategoria.length === 0) {
+              return null;
+            }
 
             return (
-              <article
-                key={serv.id}
-                className="bg-white rounded-3xl p-5 shadow-card border border-outline-variant/30 flex flex-col gap-3"
+              <section
+                key={cat.id}
+                className="bg-white rounded-3xl shadow-soft border border-outline-variant/30 overflow-hidden transition-all"
               >
-                <div className="flex items-start justify-between gap-2">
-                  <div className="flex items-start gap-3">
-                    <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                {/* Gatilho da Categoria com Ícone e Chevron */}
+                <button
+                  type="button"
+                  onClick={() => toggleCategoria(cat.id)}
+                  className="w-full p-4 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors active:scale-[0.99]"
+                >
+                  <div className="flex items-center gap-3 pr-2 min-w-0">
+                    <div className="w-11 h-11 rounded-2xl bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0">
                       <span className="material-symbols-outlined text-[24px]">
-                        {isFarmacia ? "local_pharmacy" : "medical_services"}
+                        {cat.icone}
                       </span>
                     </div>
-                    <div className="flex flex-col">
-                      <div className="flex items-center gap-1.5 flex-wrap">
-                        <h3 className="font-display font-bold text-[16px] text-on-surface leading-tight">
-                          {serv.titulo}
-                        </h3>
-                        <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                          Verificado
-                        </span>
-                      </div>
-                      {serv.responsavel && (
-                        <p className="text-[12px] text-on-surface-variant mt-0.5">
-                          {serv.responsavel}
-                        </p>
-                      )}
-                      {serv.endereco && (
-                        <p className="text-[12px] text-primary flex items-center gap-1 mt-0.5">
-                          <span className="material-symbols-outlined text-[14px]">location_on</span>
-                          <span>{serv.endereco}</span>
-                        </p>
-                      )}
+                    <div className="flex flex-col min-w-0">
+                      <h3 className="font-display font-bold text-[16px] text-on-surface leading-tight">
+                        {cat.titulo}
+                      </h3>
+                      <p className="text-[11.5px] text-on-surface-variant truncate mt-0.5">
+                        {servicosDaCategoria.length}{" "}
+                        {servicosDaCategoria.length === 1 ? "opção em Altamira" : "opções em Altamira"}
+                      </p>
                     </div>
                   </div>
-
-                  {serv.horario_funcionamento && (
-                    <span className="text-[11px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-lg whitespace-nowrap">
-                      {serv.horario_funcionamento}
+                  <div
+                    className={`w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant transition-transform duration-200 flex-shrink-0 ${
+                      isOpen ? "rotate-180 bg-primary text-white" : ""
+                    }`}
+                  >
+                    <span className="material-symbols-outlined text-[20px]">
+                      expand_more
                     </span>
-                  )}
-                </div>
+                  </div>
+                </button>
 
-                {/* Tags de Serviços Oferecidos */}
-                {tagsList.length > 0 && (
-                  <div className="flex flex-wrap gap-1.5 pt-0.5">
-                    {tagsList.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface text-[11px] font-medium flex items-center gap-1"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                        {tag}
-                      </span>
-                    ))}
+                {/* Lista de Cards da Categoria */}
+                {isOpen && (
+                  <div className="p-3.5 pt-1 flex flex-col gap-3 border-t border-outline-variant/20 bg-surface/30">
+                    {servicosDaCategoria.map((serv) => {
+                      const tagsList = serv.tags ? serv.tags.split(",").map((t) => t.trim()) : [];
+                      return (
+                        <article
+                          key={serv.id}
+                          className="bg-white rounded-2xl p-4 shadow-sm border border-outline-variant/30 flex flex-col gap-3"
+                        >
+                          <div className="flex items-start justify-between gap-2">
+                            <div className="flex flex-col">
+                              <div className="flex items-center gap-1.5 flex-wrap">
+                                <h4 className="font-display font-bold text-[15px] text-on-surface">
+                                  {serv.titulo}
+                                </h4>
+                                <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                                  Verificado
+                                </span>
+                              </div>
+                              {serv.responsavel && (
+                                <p className="text-[12px] text-on-surface-variant mt-0.5 font-medium">
+                                  {serv.responsavel}
+                                </p>
+                              )}
+                              {serv.endereco && (
+                                <p className="text-[11.5px] text-primary flex items-center gap-1 mt-0.5">
+                                  <span className="material-symbols-outlined text-[13px] flex-shrink-0">
+                                    location_on
+                                  </span>
+                                  <span>{serv.endereco}</span>
+                                </p>
+                              )}
+                            </div>
+
+                            {serv.horario_funcionamento && (
+                              <span className="text-[10.5px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-lg whitespace-nowrap flex-shrink-0">
+                                {serv.horario_funcionamento}
+                              </span>
+                            )}
+                          </div>
+
+                          {/* Tags de Serviços Oferecidos */}
+                          {tagsList.length > 0 && (
+                            <div className="flex flex-wrap gap-1">
+                              {tagsList.map((tag, i) => (
+                                <span
+                                  key={i}
+                                  className="px-2 py-0.5 rounded-md bg-surface-container text-on-surface text-[11px] font-medium flex items-center gap-1"
+                                >
+                                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+
+                          {/* Ações: WhatsApp + Rota */}
+                          <div className="flex items-center gap-2 pt-0.5">
+                            <a
+                              href={buildWhatsappServicoUrl(serv.whatsapp, serv.titulo)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex-1 min-h-[44px] rounded-xl bg-[#25D366] hover:bg-[#20BA59] text-white font-bold text-[13px] flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-sm"
+                            >
+                              <span className="material-symbols-outlined text-[18px]">chat</span>
+                              <span>Chamar no WhatsApp</span>
+                            </a>
+
+                            {serv.google_maps_url && (
+                              <a
+                                href={serv.google_maps_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-11 h-[44px] rounded-xl bg-surface-container hover:bg-surface-container-high text-primary flex items-center justify-center active:scale-95 transition-transform"
+                                title="Ver no mapa"
+                              >
+                                <span className="material-symbols-outlined text-[18px]">directions</span>
+                              </a>
+                            )}
+                          </div>
+                        </article>
+                      );
+                    })}
                   </div>
                 )}
-
-                {/* Ações */}
-                <div className="flex items-center gap-2 pt-1">
-                  <a
-                    href={buildWhatsappServicoUrl(serv.whatsapp, serv.titulo)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 min-h-[46px] rounded-xl bg-[#25D366] hover:bg-[#20BA59] text-white font-bold text-[13px] flex items-center justify-center gap-2 active:scale-98 transition-all shadow-sm"
-                  >
-                    <span className="material-symbols-outlined text-[18px]">chat</span>
-                    <span>Chamar no WhatsApp</span>
-                  </a>
-
-                  {serv.google_maps_url && (
-                    <a
-                      href={serv.google_maps_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-11 h-[46px] rounded-xl bg-surface-container hover:bg-surface-container-high text-primary flex items-center justify-center active:scale-95 transition-transform"
-                      title="Ver localização no mapa"
-                    >
-                      <span className="material-symbols-outlined text-[20px]">directions</span>
-                    </a>
-                  )}
-                </div>
-              </article>
+              </section>
             );
           })}
         </div>
       )}
 
       {/* Banner Comunitário para Cadastro de Novos Serviços */}
-      <div className="p-5 rounded-3xl bg-surface-container-high/60 border border-outline-variant/30 flex flex-col gap-2.5">
+      <div className="p-4.5 rounded-3xl bg-surface-container-high/60 border border-outline-variant/30 flex flex-col gap-2.5 mt-2">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0">
             <span className="material-symbols-outlined text-[18px]">handshake</span>
           </div>
           <h4 className="font-display font-bold text-[15px] text-on-surface">
-            Fortaleça a Rede de Altamira
+            Cadastrar Serviço em Altamira
           </h4>
         </div>
         <p className="text-[12px] text-on-surface-variant leading-relaxed">
-          Você é enfermeiro(a), fisioterapeuta, cuidador(a) ou possui farmácia em Altamira? Cadastre gratuitamente seus contatos neste guia público.
+          Oferece farmácia, home care ou cuidados de saúde em Altamira? Cadastre gratuitamente seus contatos.
         </p>
         <button
           onClick={onOpenSugestao}
-          className="h-11 mt-1 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-[13px] flex items-center justify-center gap-1.5 active:scale-98 transition-all shadow-sm"
+          className="h-11 mt-1 rounded-xl bg-primary hover:bg-primary-hover text-white font-bold text-[13px] flex items-center justify-center gap-1.5 active:scale-[0.98] transition-all shadow-sm"
         >
           <span className="material-symbols-outlined text-[18px]">person_add</span>
           <span>Cadastrar Meu Serviço</span>

@@ -1,12 +1,24 @@
 @import "tailwindcss";
 
+:root {
+  --color-primary: #0F766E;
+  --color-primary-hover: #0D9488;
+  --color-surface: #FAF8FF;
+  --color-surface-container: #EAEDFF;
+  --color-surface-container-high: #E2E7FF;
+  --color-surface-container-low: #F2F3FF;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #20BA59;
+  --transition-fast: 150ms ease-out;
+}
+
 @layer base {
   html, body {
     width: 100%;
     margin: 0;
     padding: 0;
     min-height: 100%;
-    background-color: #FAF8FF;
+    background-color: var(--color-surface);
     -webkit-tap-highlight-color: transparent;
     overscroll-behavior-y: none;
   }
@@ -18,6 +30,38 @@
   .pt-safe {
     padding-top: env(safe-area-inset-top, 0px);
   }
+}
+
+/* Transições suaves de aba */
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-tab-enter {
+  animation: tabFadeIn 180ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Esqueleto de carregamento com animação de pulso suave */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-box {
+  background: linear-gradient(90deg, #F2F3FF 25%, #E2E7FF 50%, #F2F3FF 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
 }
 
 /* Ocultar barra de rolagem visual mantendo rolagem funcional */
