@@ -12,7 +12,7 @@ export default function Header({ onLogoClick }) {
         >
           <div className="w-10 h-10 rounded-2xl bg-white shadow-sm border border-outline-variant/30 flex items-center justify-center flex-shrink-0 p-1">
             <img
-              src="/logo.svg"
+              src="/logo.png"
               alt="Pulso Saúde"
               className="w-full h-full object-contain"
             />

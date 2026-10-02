@@ -36,19 +36,24 @@ export default function ModalSugestao({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/50 backdrop-blur-sm animate-fadeIn">
       <div className="w-full max-w-md bg-white rounded-t-3xl sm:rounded-3xl p-6 shadow-2xl flex flex-col gap-4 border border-outline-variant/30 max-h-[90vh] overflow-y-auto animate-tab-enter">
-        {/* Topo do Modal com Logo */}
+        {/* Topo do Modal com Logo PNG */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-white border border-outline-variant/30 flex items-center justify-center p-1 shadow-xs flex-shrink-0">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-2xl bg-white border border-outline-variant/30 flex items-center justify-center p-1 shadow-xs flex-shrink-0">
               <img
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Pulso Saúde"
                 className="w-full h-full object-contain"
               />
             </div>
-            <h3 className="font-display font-bold text-[19px] text-on-surface">
-              Fale com a gente
-            </h3>
+            <div className="flex flex-col">
+              <h3 className="font-display font-bold text-[18px] text-on-surface leading-tight">
+                Atualize o Guia
+              </h3>
+              <span className="text-[11px] text-on-surface-variant font-medium">
+                Pulso Saúde • Altamira · PA
+              </span>
+            </div>
           </div>
           <button
             onClick={onClose}
