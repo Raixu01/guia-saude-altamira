@@ -268,6 +268,7 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
                               href={buildWhatsappExameUrl(zapNumber, exame.nome, est.nome)}
                               target="_blank"
                               rel="noopener noreferrer"
+                              onClick={() => api.trackEvent("contact_clicked", { channel: "whatsapp", category: "exame", exame: exame.nome, estabelecimento: est.nome })}
                               className="w-full min-h-[44px] rounded-xl bg-[#005C55] hover:bg-[#0F766E] text-white font-bold text-[13px] flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-sm"
                             >
                               <span className="material-symbols-outlined text-[18px]">chat</span>

@@ -3,11 +3,11 @@ window.__TASKS_DATA__ = {
     "name": "Guia de Saúde Altamira",
     "summary": "Guia público, mobile-first e regido pela honestidade radical para consulta de especialidades médicas e locais de exames em Altamira-PA, com conexão direta aos prestadores e indicação clara de incertezas.",
     "version": "1.0.0",
-    "last_updated": "2026-09-30",
+    "last_updated": "2026-10-02",
     "metrics": {
       "total_tasks": 23,
-      "completed_tasks": 21,
-      "progress_percentage": 91
+      "completed_tasks": 23,
+      "progress_percentage": 100
     }
   },
   "milestones": [
@@ -375,29 +375,31 @@ window.__TASKS_DATA__ = {
       "id": "TASK-022",
       "title": "Auditoria Estrita Tier 3 & Telemetria em analytics.json",
       "description": "Auditoria minuciosa contra os 21 princípios, validação dos indicadores de cada tarefa e atualização dos dados de telemetria.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m5_auditoria_growth",
       "tier": "tier3_reviewer",
       "indicators": [
         "Todos os 21 princípios atendidos",
         "analytics.json preenchido com eventos de produto"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-10-02"
     },
     {
       "id": "TASK-023",
       "title": "Deploy na Nuvem & Playbook de Lançamento",
       "description": "Configuração da publicação contínua no Vercel/Render, documentação do DEPLOYMENT_GIT_PLAYBOOK.md e commit no GitHub.",
-      "status": "todo",
+      "status": "done",
       "milestone": "m5_auditoria_growth",
       "tier": "tier2_fast",
       "indicators": [
         "Aplicação online em URL pública",
         "Repositório versionado com commits semânticos"
       ],
-      "audit_confirmed": false,
-      "created_at": "2026-09-28"
+      "audit_confirmed": true,
+      "created_at": "2026-09-28",
+      "completed_at": "2026-10-02"
     }
   ]
 };

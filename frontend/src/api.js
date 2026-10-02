@@ -298,5 +298,23 @@ export const api = {
     } catch {
       return { id: "local-ack", status: "registrado_localmente" };
     }
+  },
+
+  trackEvent(eventName, properties = {}) {
+    const timestamp = new Date().toISOString();
+    const eventPayload = { eventName, properties, timestamp };
+    try {
+      const history = JSON.parse(localStorage.getItem("pulso_telemetry_events") || "[]");
+      history.push(eventPayload);
+      if (history.length > 50) history.shift();
+      localStorage.setItem("pulso_telemetry_events", JSON.stringify(history));
+    } catch {
+      // Ignora erro de storage
+    }
+    if (typeof window !== "undefined" && window.dispatchEvent) {
+      window.dispatchEvent(new CustomEvent("pulso_telemetry", { detail: eventPayload }));
+    }
+    console.debug(`[Telemetry] ${eventName}`, properties);
   }
 };
+

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import BottomNav from "./components/BottomNav";
 import HomeTab from "./components/HomeTab";
@@ -8,14 +8,20 @@ import ServicosTab from "./components/ServicosTab";
 import CommunityUpdateFab from "./components/CommunityUpdateFab";
 import ModalSugestao from "./components/ModalSugestao";
 import ModalComoFunciona from "./components/ModalComoFunciona";
+import { api } from "./api";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("inicio");
   const [modalSugestaoOpen, setModalSugestaoOpen] = useState(false);
   const [modalComoFuncionaOpen, setModalComoFuncionaOpen] = useState(false);
 
+  useEffect(() => {
+    api.trackEvent("app_opened", { platform: "web", referrer: document.referrer || "direct" });
+  }, []);
+
   function handleNavigate(tabId) {
     setActiveTab(tabId);
+    api.trackEvent("category_selected", { tab: tabId });
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 

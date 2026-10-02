@@ -233,6 +233,7 @@ export default function ServicosTab({ onOpenSugestao }) {
                               href={buildWhatsappServicoUrl(serv.whatsapp, serv.titulo)}
                               target="_blank"
                               rel="noopener noreferrer"
+                              onClick={() => api.trackEvent("contact_clicked", { channel: "whatsapp", category: "servico", target: serv.titulo })}
                               className="flex-1 min-h-[44px] rounded-xl bg-[#25D366] hover:bg-[#20BA59] text-white font-bold text-[13px] flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-sm"
                             >
                               <span className="material-symbols-outlined text-[18px]">chat</span>

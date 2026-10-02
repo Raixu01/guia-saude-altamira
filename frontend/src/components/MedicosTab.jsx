@@ -251,6 +251,7 @@ export default function MedicosTab({ initialSearch = "", onOpenSugestao }) {
                       href={buildWhatsappUrl(zapNumber, prof.nome)}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => api.trackEvent("contact_clicked", { channel: "whatsapp", category: "medico", target: prof.nome, crm: prof.registro_conselho })}
                       className="w-full min-h-[50px] rounded-2xl bg-[#25D366] hover:bg-[#20BA59] text-white font-bold text-[14px] flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-transform"
                     >
                       <span className="material-symbols-outlined text-[22px]">chat</span>
@@ -263,6 +264,7 @@ export default function MedicosTab({ initialSearch = "", onOpenSugestao }) {
                         {telFixo && (
                           <a
                             href={`tel:${telFixo.replace(/\D/g, "")}`}
+                            onClick={() => api.trackEvent("contact_clicked", { channel: "phone", category: "medico", target: prof.nome })}
                             className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:text-primary font-medium"
                           >
                             <span className="material-symbols-outlined text-[15px]">call</span>

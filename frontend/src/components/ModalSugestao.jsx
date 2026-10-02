@@ -20,6 +20,7 @@ export default function ModalSugestao({ isOpen, onClose }) {
         mensagem: mensagem.trim(),
         contato_colaborador: contato.trim() || undefined,
       });
+      api.trackEvent("correction_suggested", { tipo_entidade: tipo });
       setStatusEnvio("sucesso");
       setTimeout(() => {
         setStatusEnvio(null);
