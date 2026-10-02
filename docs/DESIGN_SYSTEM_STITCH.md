@@ -1,70 +1,71 @@
-# Design System & Especificação UI/UX: Guia de Saúde Altamira
+# Design System & Especificação UI/UX: Pulso Saúde (Guia de Saúde Altamira)
 
 > **Objetivo**: Especificar a identidade visual, design tokens, componentes modulares e prompts prontos para prototipagem no **Google Stitch** e geração de telas visuais no **ChatGPT / DALL-E 3**.  
-> **Status**: Aprovado (Marco 2)  
-> **Versão**: 1.0.0  
-> **Última Atualização**: 2026-09-28  
+> **Status**: Atualizado & Consolidado (Marco 5)  
+> **Versão**: 1.1.0  
+> **Última Atualização**: 2026-10-02  
 
 ---
 
 ## 1. Identidade Visual & Design Tokens
 
-A proposta visual une **acolhimento comunitário**, **clareza extrema** e **alta legibilidade** para uso rápido no celular sob o calor e a rotina de Altamira-PA.
+A proposta visual une a identidade da marca **Pulso Saúde** com **acolhimento comunitário**, **clareza extrema** e **alta legibilidade** para uso rápido no celular sob a rotina de Altamira-PA.
 
 ### Paleta de Cores (Acolhedora & TDAH-Friendly)
-- **Fundo da Aplicação (Light Mode Acolhedor)**: `#F8FAFC` (Slate 50) e `#FFFFFF` (Card branco puro para contraste limpo).
-- **Cor Primária (Saúde & Ação)**: `#0D9488` (Teal 600 - Verde Esmeralda/Azulado) — transmite confiança, serenidade e saúde pública.
-- **Cor de Destaque / Ação Imediata**: `#25D366` (Verde WhatsApp) — reconhecimento cognitivo imediato para o botão de contato.
-- **Cor de Alerta / Incerteza**: `#F59E0B` (Âmbar 500) — usado no selo *"Informado na planilha / Não confirmado"*.
-- **Cor de Confirmação**: `#10B981` (Esmeralda 500) — usado no selo *"Confirmado recentemente com o local"*.
-- **Texto Principal**: `#0F172A` (Slate 900) — legibilidade máxima sem preto agressivo.
-- **Texto Secundário / Apoio**: `#64748B` (Slate 500) — para endereços e orientações auxiliares.
-- **Bordas & Divisores**: `#E2E8F0` (Slate 200) — divisões suaves e sem poluição.
+- **Fundo da Aplicação (Light Mode Acolhedor)**: `#F6F8FA` (Surface suave) e `#FFFFFF` (Card branco puro com sombra sutil `shadow-card`).
+- **Cor Primária (Saúde & Identidade Pulso)**: `#005C55` (Teal Profundo) e `#D7F8EE` (Mint suave de destaque).
+- **Cor de Destaque / Ação Imediata**: `#25D366` (Verde WhatsApp) — reconhecimento cognitivo instantâneo para o botão de contato.
+- **Cor de Alerta / Incerteza**: `#F59E0B` (Âmbar 500) — selo *"Dado de planilha pública / A confirmar"*.
+- **Cor de Confirmação**: `#10B981` (Esmeralda 500) — selo *"Confirmado recentemente"*.
+- **Texto Principal**: `#0F172A` (Slate 900) — legibilidade máxima e alto contraste.
+- **Texto Secundário / Apoio**: `#64748B` (Slate 500) — para endereços, CRM e horários.
+- **Bordas & Divisores**: `#E2E8F0` (Slate 200) — separadores discretos sem ruído visual.
 
 ### Tipografia & Hierarquia
-- **Fonte Principal**: `Inter` ou `Outfit` (sans-serif moderna, geométrica e extremamente legível).
+- **Fonte de Títulos**: `Plus Jakarta Sans` ou `Outfit` (geometria moderna e acolhedora).
+- **Fonte de Corpo & Dados**: `Inter` (sans-serif neutra com legibilidade otimizada em telas pequenas).
 - **Tamanhos e Pesos**:
-  - Títulos de Seção: `20px / Bold (700)`.
-  - Nomes de Médicos / Exames: `17px / Semi-Bold (600)`.
-  - Textos de Apoio / CRM / Clínicas: `14px / Regular (400)`.
-  - Badges e Selos: `12px / Medium (500)` com cantos arredondados.
-- **Áreas de Toque (Mobile)**: Botões primários com altura mínima de `52px` e cantos arredondados de `14px`, garantindo toque sem erro no polegar.
+  - Título Principal da Home: `24px - 26px / Bold (700)`.
+  - Nomes de Médicos / Exames / Serviços: `16px - 18px / Bold (700)`.
+  - Textos de Apoio / Endereços: `12px - 13px / Regular (400) e Medium (500)`.
+  - Badges e Selos de Verificação: `11px / Bold (700)` com cantos arredondados.
+- **Áreas de Toque (Mobile-First)**:
+  - Botões de WhatsApp: Altura de `50px` com cantos `rounded-2xl`.
+  - Cartões de navegação da Home: Altura mínima de `88px` com cantos `rounded-[20px]`.
 
 ---
 
-## 2. Mapa das 4 Telas do MVP
+## 2. Mapa das Telas do MVP
 
-1. **Tela 1 (`SCREEN-01`): Início Binário & Acolhedor**
-   - Cabeçalho limpo com saudação: *"Guia de Saúde Altamira — O que você precisa hoje?"*.
-   - Dois botões gigantes e contrastantes em destaque vertical:
-     - `[ 🩺 Consulta Médica ]` (Encontrar por especialidade)
-     - `[ 🔬 Exames & Laboratórios ]` (Buscar por ordem alfabética A-Z)
-   - Lupa retrátil discreta no topo para pesquisa livre opcional.
-   - Link de rodapé: *"ℹ️ Como funciona o Guia? (Nossa transparência)"*.
+1. **Header Fixo Global (Todas as Telas)**:
+   - Logotipo oficial da marca **Pulso Saúde**.
+   - Pin de localização com indicação de cidade: *"Altamira • PA"*.
+   - Botão de acesso ao modal *"Como Funciona"*.
 
-2. **Tela 2 (`SCREEN-02`): Especialidades & Card do Profissional**
-   - Grade limpa de especialidades médicas (Cardiologia, Pediatria, Ortopedia, Ginecologia, etc.).
-   - Card do médico ao clicar na especialidade:
-     - Nome completo do profissional + CRM/PA.
-     - Clínicas onde atende + bairro / ponto de referência.
-     - **Selo de Certeza**: Verde (*"Confirmado"* com data) ou Âmbar (*"Dado de planilha"*).
-     - Botão verde grande: `[ Conversar no WhatsApp ]` e botão secundário `[ Ligar ]`.
-     - Link discreto: *"Sugerir correção ou novo número"*.
+2. **Tela 1 (`SCREEN-01`): Início com 3 Blocos de Intenção**
+   - Pergunta direta de acolhimento: *"O que você precisa encontrar hoje?"*.
+   - 3 Cartões de Navegação Principais (brancos com efeito ativo em tom teal):
+     - `[ 🩺 Consultas médicas ]` ➔ Especialidades e lista de profissionais com CRM.
+     - `[ 🔬 Exames ]` ➔ Catálogo alfabético A-Z de exames e laboratórios locais.
+     - `[ 🏥 Serviços ]` ➔ Terapias, odontologia, enfermagem e clínicas multidisciplinares.
+   - Botão Flutuante Comunitário Global (FAB): `[ 💬 Atualize o Guia ]`.
 
-3. **Tela 3 (`SCREEN-03`): Lista de Exames A-Z & Laboratórios**
-   - Seletor de letras alfabéticas A-Z deslizável no topo.
-   - Lista de exames (ex: *Ecocardiograma*, *Endoscopia*, *Ressonância*, *Hemograma*).
-   - Card do exame expandido:
-     - Clínicas e laboratórios que realizam em Altamira.
-     - **Aviso de Honestidade Radical**: *"⚠️ Valores, preparo e agendamento devem ser confirmados diretamente com a clínica."*
-     - Botão de WhatsApp direto da clínica.
+3. **Tela 2 (`SCREEN-02`): Especialidades & Profissionais**
+   - Campo de busca instantânea com filtro em tempo real por médico ou CRM.
+   - Seletor de especialidades com ícones temáticos e contadores de profissionais.
+   - Cards de profissionais: Nome, CRM, local de atendimento, selo de verificação e botão verde WhatsApp com mensagem pré-formatada.
 
-4. **Tela 4 (`SCREEN-04`): Transparência Radical & Como Funciona**
-   - Explicação clara dos 4 compromissos com o cidadão:
-     - 1. Gratuito para a população.
-     - 2. Sem promessas falsas de agendamento automático pelo app.
-     - 3. Transparência na origem dos dados (planilhas públicas + checagem ativa).
-     - 4. Correção comunitária contínua.
+4. **Tela 3 (`SCREEN-03`): Catálogo de Exames A-Z**
+   - Barra de rolagem alfabética A-Z com indicador da letra selecionada.
+   - Cards expansíveis no estilo acordeão com aviso de confirmação prévia e locais disponíveis em Altamira.
+
+5. **Tela 4 (`SCREEN-04`): Serviços de Saúde & Bem-Estar**
+   - Abas por categoria (Odontologia, Fisioterapia, Psicologia, Enfermagem, etc.).
+   - Tags de serviços prestados, horários de atendimento e contato direto.
+
+6. **Modais Globais**:
+   - **Modal de Transparência / Como Funciona**: 4 compromissos de honestidade radical e limites legais.
+   - **Modal de Colaboração Cidadã**: Formulário direto para correção ou indicação de novos estabelecimentos.
 
 ---
 
