@@ -57,11 +57,11 @@ A proposta visual une a identidade da marca **Pulso Saúde** com **acolhimento c
 
 4. **Tela 3 (`SCREEN-03`): Catálogo de Exames A-Z**
    - Barra de rolagem alfabética A-Z com indicador da letra selecionada.
-   - Cards expansíveis no estilo acordeão com aviso de confirmação prévia e locais disponíveis em Altamira.
+   - Cards expansíveis no estilo acordeão com locais disponíveis em Altamira, sem selos ou avisos de confirmação.
 
 5. **Tela 4 (`SCREEN-04`): Serviços de Saúde & Bem-Estar**
-   - Abas por categoria (Odontologia, Fisioterapia, Psicologia, Enfermagem, etc.).
-   - Tags de serviços prestados, horários de atendimento e contato direto.
+   - Blocos por categoria: serviços farmacêuticos, assistência de enfermagem e cuidados e acompanhamento.
+   - Farmácias mostram empresa, localização e contato. Enfermagem mostra empresa, COREN e contato; cuidados mostram empresa e contato. Sem tags, plantões ou selo de verificação.
 
 6. **Modais Globais**:
    - **Modal de Transparência / Como Funciona**: 4 compromissos de honestidade radical e limites legais.

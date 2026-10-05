@@ -223,9 +223,20 @@ def carregar_planilha_servicos(caminho_csv: str, db: Session) -> Dict[str, int]:
                 google_maps_url=str(row.get("maps_url", "")).strip(),
                 atendimento_domiciliar=domiciliar,
                 tags=str(row.get("tags", "")).strip(),
-                status_verificacao=str(row.get("status_verificacao", "verificado")).strip(),
+                status_verificacao=str(row.get("status_verificacao", "")).strip(),
             )
             db.add(servico)
+            stats["servicos"] += 1
+        else:
+            servico.responsavel = str(row.get("responsavel", "")).strip()
+            servico.horario_funcionamento = str(row.get("horario_funcionamento", "")).strip()
+            servico.endereco = str(row.get("endereco", "")).strip()
+            servico.bairro = str(row.get("bairro", "")).strip()
+            servico.whatsapp = str(row.get("whatsapp", "")).strip()
+            servico.google_maps_url = str(row.get("maps_url", "")).strip()
+            servico.atendimento_domiciliar = domiciliar
+            servico.tags = str(row.get("tags", "")).strip()
+            servico.status_verificacao = str(row.get("status_verificacao", "")).strip()
             stats["servicos"] += 1
 
     db.commit()

@@ -60,7 +60,7 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
     setExameAbertoId(exameAbertoId === id ? null : id);
   }
 
-  function buildWhatsappExameUrl(numero, nomeExame, nomeLab) {
+  function buildWhatsappExameUrl(numero, nomeExame) {
     const numLimpo = numero ? numero.replace(/\D/g, "") : "5593999999999";
     const msg = encodeURIComponent(
       `Olá! Encontrei o contato pelo Guia de Saúde de Altamira e gostaria de confirmar valores, preparo e agendamento para o exame: ${nomeExame}.`
@@ -106,7 +106,7 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
         )}
       </div>
 
-      {/* Seletor Alfabético A-Z Otimizado */}
+      {/* Seletor Alfabético A-Z Otimizado com Contorno Nítido */}
       <div className="flex flex-col gap-1 -mx-4 px-4">
         <div className="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-none">
           <button
@@ -114,10 +114,10 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
               setLetraAtiva("");
               carregarExames("", busca);
             }}
-            className={`h-9 px-3 rounded-xl flex items-center justify-center font-display font-bold text-[12px] transition-all flex-shrink-0 ${
+            className={`h-9 px-3 rounded-xl flex items-center justify-center font-display font-bold text-[12px] transition-all flex-shrink-0 cursor-pointer ${
               !letraAtiva
-                ? "bg-primary text-white shadow-sm"
-                : "bg-white text-on-surface-variant border border-outline-variant/30 hover:bg-surface-container"
+                ? "bg-[#005C55] text-white border-2 border-[#005C55] shadow-sm"
+                : "bg-white text-on-surface-variant border border-[#94A3B8] hover:bg-surface-container"
             }`}
           >
             Todos
@@ -134,10 +134,10 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
                 onClick={() => handleLetraClick(letra)}
                 className={`h-9 min-w-[34px] px-1.5 rounded-xl flex items-center justify-center font-display font-bold text-[13px] transition-all relative flex-shrink-0 ${
                   isActive
-                    ? "bg-primary text-white shadow-md ring-2 ring-primary/20 scale-105"
+                    ? "bg-[#005C55] text-white border-2 border-[#005C55] shadow-md ring-2 ring-[#005C55]/20 scale-105 cursor-pointer"
                     : hasExams
-                    ? "bg-white text-on-surface shadow-sm border border-outline-variant/30 hover:bg-surface-container"
-                    : "bg-surface-container/30 text-outline-variant opacity-30 cursor-not-allowed"
+                    ? "bg-white text-on-surface shadow-xs border border-[#94A3B8] hover:border-[#005C55] hover:bg-[#D7F8EE]/30 cursor-pointer"
+                    : "bg-[#F1F5F9] text-[#94A3B8] border border-[#CBD5E1] opacity-60 cursor-default"
                 }`}
               >
                 {letra}
@@ -185,10 +185,10 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
                 <button
                   type="button"
                   onClick={() => toggleExame(exame.id)}
-                  className="flex items-center justify-between w-full p-4 text-left select-none hover:bg-surface-container-low transition-colors"
+                  className="flex items-center justify-between w-full p-4 text-left select-none hover:bg-surface-container-low transition-colors cursor-pointer"
                 >
                   <div className="flex items-center gap-3 pr-2 min-w-0">
-                    <div className="w-9 h-9 rounded-xl bg-[#D7F8EE] text-[#005C55] flex items-center justify-center flex-shrink-0 font-display font-bold text-[15px]">
+                    <div className="w-9 h-9 rounded-xl bg-[#D7F8EE] text-[#005C55] flex items-center justify-center flex-shrink-0 font-display font-bold text-[15px] border border-[#005C55]/20">
                       {exame.letra_inicial}
                     </div>
                     <span className="font-display font-bold text-[15px] text-on-surface leading-snug">
@@ -206,26 +206,10 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
                   </div>
                 </button>
 
-                {/* Conteúdo Expansível com Aviso Prévia e Locais */}
+                {/* Conteúdo Expansível com Locais */}
                 {isOpen && (
-                  <div className="px-4 pb-4 pt-1 flex flex-col gap-3 border-t border-outline-variant/20 bg-surface/40">
-                    {/* Aviso Obrigatório Antes da Lista de Laboratórios */}
-                    <div className="p-3 rounded-xl bg-amber-50/90 border border-amber-200 text-[12px] text-amber-900 flex items-start gap-2">
-                      <span className="material-symbols-outlined text-[17px] text-amber-700 flex-shrink-0 mt-0.5">
-                        info
-                      </span>
-                      <div className="leading-snug">
-                        <strong className="font-semibold block mb-0.5">Confirmação Prévia:</strong>
-                        Confirme valor, preparo, disponibilidade e horário diretamente com o local.
-                        {exame.preparo_basico && (
-                          <div className="mt-1 pt-1 border-t border-amber-200/60 text-[11.5px]">
-                            <strong>Preparo padrão: </strong>{exame.preparo_basico}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Lista de Estabelecimentos com Status Específico */}
+                  <div className="px-4 pb-4 pt-2 flex flex-col gap-3 border-t border-outline-variant/20 bg-surface/40">
+                    {/* Lista de Estabelecimentos */}
                     <div className="flex flex-col gap-2">
                       <span className="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">
                         Onde realizar em Altamira:
@@ -233,39 +217,29 @@ export default function ExamesTab({ initialSearch = "", onOpenSugestao }) {
                       {exame.estabelecimentos?.map((item, idx) => {
                         const est = item.estabelecimento;
                         const zapNumber = est?.whatsapp || "5593999999999";
-                        const isConfirmado = item.status_confirmacao === "confirmado";
 
                         return (
                           <div
                             key={idx}
                             className="bg-white rounded-xl p-3.5 flex flex-col gap-2.5 border border-outline-variant/30 shadow-sm"
                           >
-                            <div className="flex items-start justify-between gap-2">
-                              <div className="flex flex-col">
-                                <span className="font-display font-bold text-[14px] text-on-surface">
-                                  {est.nome}
-                                </span>
+                            <div className="flex flex-col">
+                              <span className="font-display font-bold text-[14px] text-on-surface">
+                                {est.nome}
+                              </span>
+                              {est.endereco && (
                                 <div className="flex items-center gap-1 text-[12px] text-on-surface-variant mt-0.5">
                                   <span className="material-symbols-outlined text-[14px] text-primary flex-shrink-0">
                                     location_on
                                   </span>
                                   <span>{est.endereco}</span>
                                 </div>
-                              </div>
-                              {isConfirmado ? (
-                                <span className="text-[10.5px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200 flex-shrink-0">
-                                  Confirmado no local
-                                </span>
-                              ) : (
-                                <span className="text-[10.5px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200 flex-shrink-0">
-                                  A confirmar
-                                </span>
                               )}
                             </div>
 
-                            {/* Botão de contato direto (Tom Teal da primeira tela) */}
+                            {/* Botão de contato direto */}
                             <a
-                              href={buildWhatsappExameUrl(zapNumber, exame.nome, est.nome)}
+                              href={buildWhatsappExameUrl(zapNumber, exame.nome)}
                               target="_blank"
                               rel="noopener noreferrer"
                               onClick={() => api.trackEvent("contact_clicked", { channel: "whatsapp", category: "exame", exame: exame.nome, estabelecimento: est.nome })}

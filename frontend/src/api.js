@@ -149,51 +149,51 @@ const FALLBACK_DATA = {
       id: "s1",
       categoria: "farmaceutico",
       titulo: "Farmácia São Lucas",
-      responsavel: "Dr. Marcos Vinicius (CRF-PA 3412)",
-      horario_funcionamento: "Aberto até 22h",
-      endereco: "Av. Djalma Dutra 840",
+      responsavel: null,
+      horario_funcionamento: null,
+      endereco: "Av. Djalma Dutra 840 - Centro",
       bairro: "Centro",
       whatsapp: "5593991234567",
-      tags: "Injetáveis com receita, Glicemia e Pressão, Nebulização",
-      status_verificacao: "verificado"
+      tags: null,
+      status_verificacao: null
     },
     {
       id: "s2",
       categoria: "farmaceutico",
       titulo: "Drogaria Rio Xingu",
-      responsavel: "Dra. Helena Souza (CRF-PA 2890)",
-      horario_funcionamento: "Plantão 24h",
-      endereco: "Rua 7 de Setembro 1205",
+      responsavel: null,
+      horario_funcionamento: null,
+      endereco: "Rua 7 de Setembro 1205 - Sudam I",
       bairro: "Sudam I",
       whatsapp: "5593992345678",
-      tags: "Curativos Simples, Entrega Domiciliar, Plantão 24h",
-      status_verificacao: "verificado"
+      tags: null,
+      status_verificacao: null
     },
     {
       id: "s3",
       categoria: "enfermagem",
       titulo: "Equipe Cuidar Xingu",
-      responsavel: "Enf. Mariana Bastos (COREN-PA 218.440)",
-      horario_funcionamento: "Plantões de 6h a 12h",
-      endereco: "Atendimento domiciliar em toda Altamira",
+      responsavel: "COREN-PA 218.440",
+      horario_funcionamento: null,
+      endereco: "Atendimento domiciliar em Altamira",
       bairro: "Sudam I",
       whatsapp: "5593981122334",
       atendimento_domiciliar: true,
-      tags: "Retirada de pontos, Curativos a vácuo, Sondagem vesical, Antibióticos EV",
-      status_verificacao: "verificado"
+      tags: null,
+      status_verificacao: null
     },
     {
       id: "s4",
       categoria: "cuidados",
       titulo: "Viver Bem Idosos",
-      responsavel: "Coord. Luciana Ribeiro",
-      horario_funcionamento: "Escala Mensal ou Diárias",
-      endereco: "Atendimento em domicílio",
+      responsavel: null,
+      horario_funcionamento: null,
+      endereco: "Atendimento em domicílio em Altamira",
       bairro: "Altamira",
       whatsapp: "5593984567890",
       atendimento_domiciliar: true,
-      tags: "Cuidadores certificados, Suporte de rotina, Estimulação cognitiva",
-      status_verificacao: "verificado"
+      tags: null,
+      status_verificacao: null
     }
   ]
 };

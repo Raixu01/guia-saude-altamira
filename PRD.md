@@ -50,7 +50,7 @@ Inspirado pelo princípio da **honestidade radical**, o Guia transforma planilha
    │             │
    │             └─► Clínicas e Laboratórios que realizam o exame
    │                    │
-   │                    └─► Aviso de Confirmação Prévia + Botão de Contato
+   │                    └─► Lista direta de locais + Botão de Contato
    │
    └─► Opção C: [ ℹ️ Como Funciona o Guia? ]
           │
@@ -67,7 +67,7 @@ Inspirado pelo princípio da **honestidade radical**, o Guia transforma planilha
 | `RF-02` | **Navegação de Consultas por Especialidade** | Apresenta a grade/lista de especialidades disponíveis. Ao selecionar uma especialidade, exibe todos os profissionais vinculados, com nome, CRM, clínicas onde atende e status do dado. | Must Have | Tier 2 |
 | `RF-03` | **Card de Profissional & Ação de Contato** | Exibe detalhes do profissional: nome completo, especialidade, registro de classe (CRM), clínicas/endereço de atendimento, badges de confirmação e botão direto de WhatsApp com mensagem pré-configurada ou discador telefônico. | Must Have | Tier 2 |
 | `RF-04` | **Navegação de Exames por Índice Alfabético** | Lista alfabética (A-Z) com seletor de letras e filtro rápido. Ao selecionar o exame, lista todos os estabelecimentos credenciados/mapeados que realizam o exame na cidade. | Must Have | Tier 2 |
-| `RF-05` | **Selo Visual de Incerteza & Confiabilidade** | Todo contato exibe um selo explícito: Verde (`Confirmado recentemente com o local`) ou Âmbar (`Informado na planilha / Não confirmado`). O card de exame contém aviso: *"Confirme valores, preparo e disponibilidade diretamente com o local"*. | Must Have | Tier 2 |
+| `RF-05` | **Selo Visual de Incerteza & Confiabilidade** | Os cards de profissionais médicos podem exibir o status do dado. Catálogos de exames e serviços mantêm leitura direta, sem selo de confirmação ou aviso de preparo. | Must Have | Tier 2 |
 | `RF-06` | **Canal de Colaboração & Correção Cidadã** | Botão discreto `[ Sugerir alteração ou novo dado ]` em cada card, permitindo ao usuário ou clínica enviar apontamento de telefone mudado, novo médico ou exame. | Must Have | Tier 2 |
 | `RF-07` | **Tela de Transparência & Limites Legais** | Página/modal dedicada explicando que o Guia não faz agendamentos, não recebe dinheiro de consultas, não faz diagnóstico e não ranqueia médicos por patrocínio. | Must Have | Tier 2 |
 | `RF-08` | **Busca Opcional Retrátil (Lupa)** | Campo de busca acionado por ícone de lupa discreto que filtra instantaneamente por nome do profissional, clínica, especialidade ou exame sem poluir o visual principal. | Should Have | Tier 2 |

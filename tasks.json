@@ -297,13 +297,13 @@
     {
       "id": "TASK-019",
       "title": "Índice Alfabético A-Z de Exames & Estabelecimentos",
-      "description": "Construção do catálogo de exames com seletor alfabético e lista de clínicas/laboratórios com aviso de confirmação direta.",
+      "description": "Construção do catálogo de exames com seletor alfabético bem demarcado e lista direta de clínicas/laboratórios.",
       "status": "done",
       "milestone": "m4_frontend_ui",
       "tier": "tier2_fast",
       "indicators": [
         "Filtro por letra A-Z responsivo no smartphone",
-        "Aviso de confirmação prévia evidente em cada exame"
+        "Cards de locais sem selos ou avisos de confirmação"
       ],
       "audit_confirmed": true,
       "created_at": "2026-09-28",

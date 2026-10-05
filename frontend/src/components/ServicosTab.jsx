@@ -16,22 +16,26 @@ export default function ServicosTab({ onOpenSugestao }) {
     {
       id: "farmaceutico",
       titulo: "Serviços Farmacêuticos",
-      subtitulo: "Farmácias de plantão, injetáveis, nebulização e teste de glicemia",
       icone: "local_pharmacy",
     },
     {
       id: "enfermagem",
       titulo: "Assistência de Enfermagem",
-      subtitulo: "Home care, curativos especiais, retirada de pontos e sondagem",
       icone: "medical_services",
     },
     {
       id: "cuidados",
       titulo: "Cuidados e Acompanhamento",
-      subtitulo: "Cuidadores de idosos e fisioterapia respiratória em domicílio",
       icone: "elderly",
     },
   ];
+
+  function extrairCoren(responsavel) {
+    if (!responsavel) return "";
+    const match = responsavel.match(/COREN[^)]+/i);
+    if (match) return match[0];
+    return responsavel.includes("COREN") ? responsavel : "";
+  }
 
   useEffect(() => {
     carregarServicos();
@@ -65,7 +69,7 @@ export default function ServicosTab({ onOpenSugestao }) {
   function buildWhatsappServicoUrl(numero, titulo) {
     const numLimpo = numero ? numero.replace(/\D/g, "") : "5593999999999";
     const msg = encodeURIComponent(
-      `Olá! Encontrei o contato do ${titulo} pelo Guia de Saúde de Altamira e gostaria de informações sobre atendimento.`
+      `Olá! Encontrei o contato da ${titulo} pelo Guia de Saúde de Altamira e gostaria de informações sobre atendimento.`
     );
     return `https://wa.me/${numLimpo}?text=${msg}`;
   }
@@ -93,7 +97,7 @@ export default function ServicosTab({ onOpenSugestao }) {
           type="search"
           value={busca}
           onChange={handleBuscaChange}
-          placeholder="Busque por farmácia, cuidador, curativos..."
+          placeholder="Busque por farmácia, cuidador, enfermagem..."
           className="w-full h-12 pl-11 pr-11 bg-white rounded-2xl text-[14px] text-on-surface placeholder:text-on-surface-variant/70 shadow-soft border border-outline-variant/30 focus:outline-none focus:ring-2 focus:ring-primary"
         />
         {busca && (
@@ -139,10 +143,10 @@ export default function ServicosTab({ onOpenSugestao }) {
                 <button
                   type="button"
                   onClick={() => toggleCategoria(cat.id)}
-                  className="w-full p-4 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors active:scale-[0.99]"
+                  className="w-full p-4 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors active:scale-[0.99] cursor-pointer"
                 >
                   <div className="flex items-center gap-3 pr-2 min-w-0">
-                    <div className="w-11 h-11 rounded-2xl bg-[#D7F8EE] text-[#005C55] flex items-center justify-center flex-shrink-0">
+                    <div className="w-11 h-11 rounded-2xl bg-[#D7F8EE] text-[#005C55] flex items-center justify-center flex-shrink-0 border border-[#005C55]/20">
                       <span className="material-symbols-outlined text-[24px]">
                         {cat.icone}
                       </span>
@@ -166,68 +170,36 @@ export default function ServicosTab({ onOpenSugestao }) {
                 {isOpen && (
                   <div className="p-3.5 pt-1 flex flex-col gap-3 border-t border-outline-variant/20 bg-surface/30">
                     {servicosDaCategoria.map((serv) => {
-                      const allTags = serv.tags ? serv.tags.split(",").map((t) => t.trim()).filter(Boolean) : [];
-                      const visibleTags = allTags.slice(0, 3);
-                      const extraCount = allTags.length - visibleTags.length;
+                      const coren = serv.categoria === "enfermagem" ? extrairCoren(serv.responsavel) : "";
+                      const mostrarEndereco = serv.categoria === "farmaceutico";
 
                       return (
                         <article
                           key={serv.id}
                           className="bg-white rounded-2xl p-4 shadow-sm border border-outline-variant/30 flex flex-col gap-3"
                         >
-                          <div className="flex items-start justify-between gap-2">
-                            <div className="flex flex-col">
-                              <div className="flex items-center gap-1.5 flex-wrap">
-                                <h4 className="font-display font-bold text-[15px] text-on-surface">
-                                  {serv.titulo}
-                                </h4>
-                                <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                                  Verificado
-                                </span>
-                              </div>
-                              {serv.responsavel && (
-                                <p className="text-[12px] text-on-surface-variant mt-0.5 font-medium">
-                                  {serv.responsavel}
-                                </p>
-                              )}
-                              {serv.endereco && (
-                                <p className="text-[11.5px] text-primary flex items-center gap-1 mt-0.5">
-                                  <span className="material-symbols-outlined text-[13px] flex-shrink-0">
-                                    location_on
-                                  </span>
-                                  <span>{serv.endereco}</span>
-                                </p>
-                              )}
-                            </div>
+                          <div className="flex flex-col gap-1">
+                            <h4 className="font-display font-bold text-[15px] text-on-surface leading-tight">
+                              {serv.titulo}
+                            </h4>
 
-                            {serv.horario_funcionamento && (
-                              <span className="text-[10.5px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-lg whitespace-nowrap flex-shrink-0">
-                                {serv.horario_funcionamento}
-                              </span>
+                            {coren && (
+                              <p className="text-[12px] font-semibold text-primary">
+                                {coren}
+                              </p>
+                            )}
+
+                            {mostrarEndereco && serv.endereco && (
+                              <p className="text-[12px] text-on-surface-variant flex items-center gap-1 mt-0.5">
+                                <span className="material-symbols-outlined text-[14px] text-primary flex-shrink-0">
+                                  location_on
+                                </span>
+                                <span>{serv.endereco}</span>
+                              </p>
                             )}
                           </div>
 
-                          {/* Tags de Serviços Oferecidos (Máximo 3 tags + contador) */}
-                          {visibleTags.length > 0 && (
-                            <div className="flex flex-wrap gap-1 items-center">
-                              {visibleTags.map((tag, i) => (
-                                <span
-                                  key={i}
-                                  className="px-2 py-0.5 rounded-md bg-surface-container text-on-surface text-[11px] font-medium flex items-center gap-1"
-                                >
-                                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                  {tag}
-                                </span>
-                              ))}
-                              {extraCount > 0 && (
-                                <span className="px-1.5 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant text-[10.5px] font-semibold">
-                                  +{extraCount}
-                                </span>
-                              )}
-                            </div>
-                          )}
-
-                          {/* Ações: WhatsApp + Rota */}
+                          {/* Enfermagem e cuidados exibem somente empresa, COREN (quando aplicável) e contato. */}
                           <div className="flex items-center gap-2 pt-0.5">
                             <a
                               href={buildWhatsappServicoUrl(serv.whatsapp, serv.titulo)}
@@ -237,15 +209,15 @@ export default function ServicosTab({ onOpenSugestao }) {
                               className="flex-1 min-h-[44px] rounded-xl bg-[#25D366] hover:bg-[#20BA59] text-white font-bold text-[13px] flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-sm"
                             >
                               <span className="material-symbols-outlined text-[18px]">chat</span>
-                              <span>Chamar no WhatsApp</span>
+                              <span>Contato</span>
                             </a>
 
-                            {serv.google_maps_url && (
+                            {mostrarEndereco && serv.google_maps_url && (
                               <a
                                 href={serv.google_maps_url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-11 h-[44px] rounded-xl bg-surface-container hover:bg-surface-container-high text-primary flex items-center justify-center active:scale-95 transition-transform"
+                                className="w-11 h-[44px] rounded-xl border border-outline-variant/50 bg-surface-container hover:bg-surface-container-high text-primary flex items-center justify-center active:scale-95 transition-transform"
                                 title="Ver no mapa"
                               >
                                 <span className="material-symbols-outlined text-[18px]">directions</span>
