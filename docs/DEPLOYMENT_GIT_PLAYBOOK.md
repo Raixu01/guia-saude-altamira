@@ -11,13 +11,13 @@
 ```
 ┌────────────────────────────────────────┐
 │  FRONTEND (React + Vite + Tailwind)    │  →  Hospedagem: Vercel (Gratuito)
-│  • Conecta via API REST ao Backend     │  →  Domínio: guiadesaudealtamira.vercel.app
+│  • Conecta via API REST ao Backend     │  →  Domínio: https://guia-saude-altamira.vercel.app
 └──────────────────┬─────────────────────┘
                    │
                    ▼
 ┌────────────────────────────────────────┐
-│  BACKEND (Python + FastAPI + Uvicorn)  │  →  Hospedagem: Render / Railway (Gratuito)
-│  • Endpoints /api com CORS configurado │  →  URL: api-pulso-saude.onrender.com
+│  BACKEND (Python + FastAPI + Uvicorn)  │  →  Hospedagem: Render (Gratuito)
+│  • Endpoints /api com CORS configurado │  →  URL: https://guia-saude-api.onrender.com
 └──────────────────┬─────────────────────┘
                    │
                    ▼
