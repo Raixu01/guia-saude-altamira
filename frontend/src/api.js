@@ -1,4 +1,8 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  (import.meta.env.PROD
+    ? "https://guia-saude-api.onrender.com/api"
+    : "http://localhost:8000/api");
 
 // Dados locais de fallback caso a API não esteja ligada no momento
 const FALLBACK_DATA = {
