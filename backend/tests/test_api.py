@@ -54,17 +54,16 @@ def test_filtrar_profissionais_por_especialidade():
     dados = response.json()
     assert len(dados) >= 2
     nomes = [p["nome"] for p in dados]
-    assert "Dr. Francisco Schucrutz" in nomes
+    assert "Patrick Lobato" in nomes
 
 def test_buscar_profissional_por_nome():
-    response = client.get("/api/profissionais?busca=Schucrutz")
+    response = client.get("/api/profissionais?busca=Lobato")
     assert response.status_code == 200
     dados = response.json()
     assert len(dados) == 1
-    assert dados[0]["nome"] == "Dr. Francisco Schucrutz"
-    assert dados[0]["registro_conselho"] == "CRM-PA 5892"
+    assert dados[0]["nome"] == "Patrick Lobato"
+    assert "CRM PA 11113" in dados[0]["registro_conselho"]
     assert len(dados[0]["locais_atendimento"]) > 0
-    assert dados[0]["locais_atendimento"][0]["estabelecimento"]["whatsapp"] == "5593999990001"
 
 def test_listar_exames():
     response = client.get("/api/exames")

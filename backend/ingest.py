@@ -11,15 +11,16 @@ if sys.platform.startswith("win"):
 
 from app.database import SessionLocal, Base, engine
 from app.services.ingestion import (
-    carregar_planilha_profissionais,
-    carregar_planilha_exames,
+    carregar_estabelecimentos,
+    carregar_profissionais_real,
+    carregar_exames_real,
     carregar_planilha_servicos,
 )
 
 def run_ingestion():
-    print("=" * 60)
-    print("[*] INICIANDO INGESTAO DE PLANILHAS - GUIA DE SAUDE ALTAMIRA")
-    print("=" * 60)
+    print("=" * 65)
+    print("[*] INICIANDO INGESTAO DE BASES REAIS - GUIA DE SAUDE ALTAMIRA")
+    print("=" * 65)
 
     # Garante que as tabelas existem
     Base.metadata.create_all(bind=engine)
@@ -28,43 +29,51 @@ def run_ingestion():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     data_dir = os.path.join(base_dir, "data")
 
-    csv_profissionais = os.path.join(data_dir, "sample_planilha_profissionais.csv")
-    csv_exames = os.path.join(data_dir, "sample_planilha_exames.csv")
+    csv_estabelecimentos = os.path.join(data_dir, "estabelecimentos.csv")
+    csv_profissionais = os.path.join(data_dir, "profissionais.csv")
+    csv_exames = os.path.join(data_dir, "exames.csv")
     csv_servicos = os.path.join(data_dir, "sample_planilha_servicos.csv")
 
     try:
-        # 1. Profissionais
+        # 1. Estabelecimentos
+        if os.path.exists(csv_estabelecimentos):
+            print(f"\n[+] 1. Ingestao de Estabelecimentos: {csv_estabelecimentos}")
+            s_est = carregar_estabelecimentos(csv_estabelecimentos, db)
+            print(f"   [OK] Estabelecimentos novos: {s_est['estabelecimentos_novos']}")
+            print(f"   [OK] Estabelecimentos atualizados: {s_est['estabelecimentos_atualizados']}")
+        else:
+            print(f"[WARN] Arquivo nao encontrado: {csv_estabelecimentos}")
+
+        # 2. Profissionais
         if os.path.exists(csv_profissionais):
-            print(f"\n[+] Ingestao de Profissionais: {csv_profissionais}")
-            s_prof = carregar_planilha_profissionais(csv_profissionais, db)
+            print(f"\n[+] 2. Ingestao de Profissionais & Especialidades: {csv_profissionais}")
+            s_prof = carregar_profissionais_real(csv_profissionais, db)
             print(f"   [OK] Especialidades novas: {s_prof['especialidades']}")
-            print(f"   [OK] Estabelecimentos novos: {s_prof['estabelecimentos']}")
             print(f"   [OK] Profissionais novos: {s_prof['profissionais']}")
-            print(f"   [OK] Vinculos criados: {s_prof['vinculos']}")
+            print(f"   [OK] Vinculos profissional-clinica: {s_prof['vinculos']}")
         else:
             print(f"[WARN] Arquivo nao encontrado: {csv_profissionais}")
 
-        # 2. Exames
+        # 3. Exames
         if os.path.exists(csv_exames):
-            print(f"\n[+] Ingestao de Exames: {csv_exames}")
-            s_exam = carregar_planilha_exames(csv_exames, db)
+            print(f"\n[+] 3. Ingestao do Catalogo de Exames: {csv_exames}")
+            s_exam = carregar_exames_real(csv_exames, db)
             print(f"   [OK] Exames novos: {s_exam['exames']}")
-            print(f"   [OK] Estabelecimentos novos: {s_exam['estabelecimentos']}")
-            print(f"   [OK] Vinculos exame-local: {s_exam['vinculos']}")
+            print(f"   [OK] Vinculos exame-estabelecimento: {s_exam['vinculos']}")
         else:
             print(f"[WARN] Arquivo nao encontrado: {csv_exames}")
 
-        # 3. Serviços
+        # 4. Serviços de Cuidados & Farmácias
         if os.path.exists(csv_servicos):
-            print(f"\n[+] Ingestao de Servicos Comunitarios: {csv_servicos}")
+            print(f"\n[+] 4. Ingestao de Servicos de Saude Comunitarios: {csv_servicos}")
             s_serv = carregar_planilha_servicos(csv_servicos, db)
-            print(f"   [OK] Servicos de saude novos: {s_serv['servicos']}")
+            print(f"   [OK] Servicos de saude: {s_serv['servicos']}")
         else:
             print(f"[WARN] Arquivo nao encontrado: {csv_servicos}")
 
-        print("\n" + "=" * 60)
-        print("[SUCCESS] INGESTAO CONCLUIDA COM SUCESSO NO BANCO DE DADOS!")
-        print("=" * 60)
+        print("\n" + "=" * 65)
+        print("[SUCCESS] CARGA DAS 3 BASES REAIS CONCLUIDA COM SUCESSO NO BANCO!")
+        print("=" * 65)
 
     except Exception as e:
         print(f"\n[ERRO] DURANTE A INGESTAO: {e}", file=sys.stderr)

@@ -1,0 +1,747 @@
+cod,local,exame
+ex_0001,Maxxi Saúde,Densitometria Óssea
+ex_0002,Maxxi Saúde,Ecocardiograma
+ex_0003,Maxxi Saúde,Mamografia Digital
+ex_0004,Maxxi Saúde,Radiografia em Geral
+ex_0005,Maxxi Saúde,Ressonância Magnética
+ex_0006,Maxxi Saúde,Tomografia Computadorizada
+ex_0007,Maxxi Saúde,Ultrassonografia
+ex_0008,Maxxi Saúde,Imagem Cardiovascular
+ex_0009,Maxxi Saúde,Angiotomografia
+ex_0010,Maxxi Saúde,Análise Clínica
+ex_0011,Clínica da Família,Exames Laboratoriais
+ex_0012,Clínica da Família,Raio-X
+ex_0013,Clínica da Família,Eletrocardiograma (ECG)
+ex_0014,Clínica da Família,MAPA (Monitorização Ambulatorial da Pressão Arterial)
+ex_0015,Clínica da Família,Holter
+ex_0016,Clínica da Família,Endoscopia
+ex_0017,Clínica da Família,Ecocardiograma
+ex_0018,Clínica da Família,Ultrassonografia
+ex_0019,Clínica da Família,Biópsia de próstata
+ex_0020,Clínica da Família,Biópsia dermatológica
+ex_0021,Clínica da Família,Colposcopia
+ex_0022,Clínica da Família,FRAXX
+ex_0023,Viver Centro de Saúde,Eltrocardiograma
+ex_0024,Viver Centro de Saúde,Radiografia
+ex_0025,Viver Centro de Saúde,Exames Laboratoriais
+ex_0026,Viver Centro de Saúde,USG Transvaginal
+ex_0027,Viver Centro de Saúde,PCCU
+ex_0028,Viver Centro de Saúde,USG das mamas
+ex_0029,Viver Centro de Saúde,Tomografia Computadorizada
+ex_0030,CDC Saúde,Exames Laboratoriais
+ex_0031,CDC Saúde,Tomografia Computadorizada
+ex_0032,CDC Saúde,Ultrassonografia
+ex_0033,Clínica do Coração,Eletrocardiograma (ECG)
+ex_0034,Clínica do Coração,Ecocardiograma
+ex_0035,Clínica do Coração,Ecocardiograma Fetal
+ex_0036,Clínica do Coração,Teste Ergométrico
+ex_0037,Clínica do Coração,Carótidas e Vértebras
+ex_0038,Clínica do Coração,Es Complex
+ex_0039,Clínica do Coração,Bioimpedância
+ex_0040,Clínica do Coração,Holter 24H
+ex_0041,Clínica do Coração,MAPA (Monitorização Ambulatorial da Pressão Arterial)
+ex_0042,Clínica do Coração,DETOX
+ex_0043,Clínica do Coração,Ecocardiograma Transesofágico
+ex_0044,Clínica do Coração,Urofluxometria
+ex_0045,Clínica do Coração,Estudo Urodinâmico
+ex_0046,Laboclin,Glicose pos prandial
+ex_0047,Laboclin,Indice homa ir
+ex_0048,Laboclin,Nicotina serica
+ex_0049,Laboclin,Anticorpos ige específico f262 berinjela
+ex_0050,Laboclin,17 alfa hidroxiprogesterona
+ex_0051,Laboclin,17 beta estradiol saliva
+ex_0052,Laboclin,17 cetosteróides 17 ks urina 24 horas
+ex_0053,Laboclin,17 hidroxiprogesterona
+ex_0054,Laboclin,17 oh corticosteróides
+ex_0055,Laboclin,2 5 hexanodiona urinária
+ex_0056,Laboclin,3 alfa androstanediol glucoronide
+ex_0057,Laboclin,5 nucleotidase
+ex_0058,Laboclin,Acetilcolina anticorpos anti receptor
+ex_0059,Laboclin,Acetilcolinesterase eritrocitária
+ex_0060,Laboclin,Acetona final de jornada de trabalho acetona final de jornada de trabalho acetona final de jornada de trabalho
+ex_0061,Laboclin,Ácido 5 hidroxi indol acético
+ex_0062,Laboclin,Ácido delta amino levulínico ala u
+ex_0063,Laboclin,Acido fólico
+ex_0064,Laboclin,Acido fólico eritrocitário
+ex_0065,Laboclin,Ácido hipúrico
+ex_0066,Laboclin,Ácido homovanílico
+ex_0067,Laboclin,Acido lático lactato
+ex_0068,Laboclin,Ácido mandélico urina final de jornada
+ex_0069,Laboclin,Ácido metil hipúrico
+ex_0070,Laboclin,Ácido metilmalônico sérico
+ex_0071,Laboclin,Ácido oxálico oxalato
+ex_0072,Laboclin,Ácido tras muconico urina final de jornada
+ex_0073,Laboclin,Ácido úrico
+ex_0074,Laboclin,Ácido úrico canino
+ex_0075,Laboclin,Ácido úrico equino
+ex_0076,Laboclin,Ácido úrico urinário amostra isolada
+ex_0077,Laboclin,Ácido úrico urinário urina 24 horas
+ex_0078,Laboclin,Ácido valpróico
+ex_0079,Laboclin,Ácido valpróico
+ex_0080,Laboclin,Ácido vanil mandélico amostra isolada
+ex_0081,Laboclin,Ácido vanil mandélico urina 24 horas
+ex_0082,Laboclin,Ácidos orgânicos estudo completo urina
+ex_0083,Laboclin,Acilcarnitinas perfil quantitativo
+ex_0084,Laboclin,Acth hormônio adrenocorticotrófico
+ex_0085,Laboclin,Adenosina deaminase ada
+ex_0086,Laboclin,Adenosina deaminase ada liquido pleural
+ex_0087,Laboclin,Albumina
+ex_0088,Laboclin,Aldolase
+ex_0089,Laboclin,Aldosterona
+ex_0090,Laboclin,Alfa 1 glicoproteína ácida mucoproteinas
+ex_0091,Laboclin,Alfa fetoproteína afp
+ex_0092,Laboclin,Amilase salivar
+ex_0093,Laboclin,Aminoácidos em plasma cromatografia
+ex_0094,Laboclin,Amonia
+ex_0095,Laboclin,Amonia urina 24 h
+ex_0096,Laboclin,Análise mutações r506q h1299r y1702c fator v de leiden
+ex_0097,Laboclin,Androstanediol glucuronide 3 alfa diol
+ex_0098,Laboclin,Androstenediona
+ex_0099,Laboclin,Anti beta2 glicoprotéina igg e igm
+ex_0100,Laboclin,Anti dna dupla hélice ou nativo
+ex_0101,Laboclin,Anti dna hélice simples
+ex_0102,Laboclin,Anti dnase b
+ex_0103,Laboclin,Anti ena painel
+ex_0104,Laboclin,Anti lkm 1
+ex_0105,Laboclin,Anti nucleossomo células le
+ex_0106,Laboclin,Anti pneumococos 23 sorotipos
+ex_0107,Laboclin,Anti saccharomyces cerevisiae iga e igg
+ex_0108,Laboclin,Anti sars cov 2 anticorpos neutralizantes
+ex_0109,Laboclin,Anti scl 70
+ex_0110,Laboclin,Anti scl 70
+ex_0111,Laboclin,Anti sintetase mi 2 ku pm100 pm75 jo1 srp pl7 pl12 ej oj
+ex_0112,Laboclin,Anti tireoglobulina anticorpos atg
+ex_0113,Laboclin,Anti tireóide
+ex_0114,Laboclin,Anti transglutaminase iga
+ex_0115,Laboclin,Anti trombina iii
+ex_0116,Laboclin,Anticoagulante circulante pesquisa
+ex_0117,Laboclin,Anticoagulante lúpico
+ex_0118,Laboclin,Anticorpos anti c1q soro
+ex_0119,Laboclin,Anticorpos anti centrômero
+ex_0120,Laboclin,Anticorpos anti chikungunya igg e igm
+ex_0121,Laboclin,Anticorpos anti echinococcus granulosus hidatidose
+ex_0122,Laboclin,Anticorpos anti fosfatidil serina
+ex_0123,Laboclin,Anticorpos anti gliadina iga
+ex_0124,Laboclin,Anticorpos anti histoplasma capsulatum
+ex_0125,Laboclin,Anticorpos anti ia2 diabetes mellitus
+ex_0126,Laboclin,Anticorpos anti ilhota
+ex_0127,Laboclin,Anticorpos anti insulina
+ex_0128,Laboclin,Anticorpos anti mda5 cadm140
+ex_0129,Laboclin,Anticorpos anti proteinase 3
+ex_0130,Laboclin,Anticorpos anti ribossomas
+ex_0131,Laboclin,Anticorpos anti tiroquinase músculo específica anti musk
+ex_0132,Laboclin,Anticorpos anti tirosina fosfatase
+ex_0133,Laboclin,Anticorpos antiaquaporina 4
+ex_0134,Laboclin,Anticorpos contra antígenos nucleares extraíveis ena
+ex_0135,Laboclin,Anticorpos iga anti fosfatidilserina
+ex_0136,Laboclin,Anticorpos ige específico c232 lidocaína
+ex_0137,Laboclin,Anticorpos ige específico c232 lidocaína
+ex_0138,Laboclin,Anticorpos ige específico c285 bupivacaina
+ex_0139,Laboclin,Anticorpos ige específico c320 acetilcisteina
+ex_0140,Laboclin,Anticorpos ige específico c703 ácido benzóico
+ex_0141,Laboclin,Anticorpos ige específico f325 leite de ovelha
+ex_0142,Laboclin,Anticorpos ige específico f333 linhaça linum usitatissimum
+ex_0143,Laboclin,Anticorpos ige específico k81 ocupacionais ficus sp.
+ex_0144,Laboclin,Anticorpos igg anti coxsackie a9
+ex_0145,Laboclin,Anticorpos igg anti coxsackie b 1 6
+ex_0146,Laboclin,Anticorpos igg anti mycobacterium tuberculosis
+ex_0147,Laboclin,Anticorpos igg anti rickettsia rickettsii febre maculosa
+ex_0148,Laboclin,Anticorpos igg anti sorotipos de pneumococos
+ex_0149,Laboclin,Anticorpos igm anti coxsackie a9
+ex_0150,Laboclin,Anticorpos igm anti mycobacterium tuberculosis
+ex_0151,Laboclin,Anticorpos igm anti rickettsia rickettsii febre maculosa
+ex_0152,Laboclin,Anticorpos znt8 soro
+ex_0153,Laboclin,Antifungigrama teste de sensibilidade
+ex_0154,Laboclin,Antigeno ca 27.29 marcador tumoral
+ex_0155,Laboclin,Antígeno cryptococcus neoformans
+ex_0156,Laboclin,Antigeno he 4 marcador tumoral de ovario
+ex_0157,Laboclin,Apolipoproteína a 1
+ex_0158,Laboclin,Apolipoproteína b
+ex_0159,Laboclin,Apolipoproteína e
+ex_0160,Laboclin,Arsênio urinário urinário início de jornada de trabalho
+ex_0161,Laboclin,Asca anti saccharomyces cerevisiae iga e igg
+ex_0162,Laboclin,Aslo antiestreptolisina o
+ex_0163,Laboclin,Aspergillus anticorpos
+ex_0164,Laboclin,Ast aspartato aminotransferase tgo
+ex_0165,Laboclin,Ast tgo equino
+ex_0166,Laboclin,Atividade da biotinidase neonatal
+ex_0167,Laboclin,Atividade de cofator ristocetina do fator de von
+ex_0168,Laboclin,Avaliação de risco pré natal 1º trimestre papp a beta hcg
+ex_0169,Laboclin,Baar cultura
+ex_0170,Laboclin,Baar cultura 2 amostras
+ex_0171,Laboclin,Baar na escarro pesquisa
+ex_0172,Laboclin,Baar na escarro pesquisa 3 amostras
+ex_0173,Laboclin,Baar na linfa pesquisa
+ex_0174,Laboclin,Baar pesquisa
+ex_0175,Laboclin,Baar pesquisa
+ex_0176,Laboclin,Bacterioscopia
+ex_0177,Laboclin,Bacterioscópico líquor
+ex_0178,Laboclin,Bacterioscópico lquido pleural
+ex_0179,Laboclin,Bacterioscópico vários materiais
+ex_0180,Laboclin,Beta 2 microglobulina
+ex_0181,Laboclin,Beta caroteno
+ex_0182,Laboclin,Beta hcg
+ex_0183,Laboclin,Beta hcg quantitativo
+ex_0184,Laboclin,Beta hidroxibutirato bhb
+ex_0185,Laboclin,Bicarbonato soro
+ex_0186,Laboclin,Bilirrubina direta equino
+ex_0187,Laboclin,Bilirrubina total equino
+ex_0188,Laboclin,Bilirrubinas total e frações
+ex_0189,Laboclin,Bilirrubinas total e frações canina
+ex_0190,Laboclin,Bilirrubinas total e frações felina
+ex_0191,Laboclin,Bioquimica
+ex_0192,Laboclin,Biotinidase plasma
+ex_0193,Laboclin,Blastomicose pesquisa paracoccidioidomicose
+ex_0194,Laboclin,Bnp peptídeo natriurético
+ex_0195,Laboclin,Bordetella anticorpos igg
+ex_0196,Laboclin,Borrelia burgdorferi doença de lyme igg
+ex_0197,Laboclin,Brucelose igg anticorpos anti
+ex_0198,Laboclin,Brucelose igm anticorpos anti
+ex_0199,Laboclin,C3 complemento
+ex_0200,Laboclin,C4 complemento
+ex_0201,Laboclin,Ca 125 ii
+ex_0202,Laboclin,Ca 15 3
+ex_0203,Laboclin,Ca 19 9
+ex_0204,Laboclin,Cádmio sanguíneo
+ex_0205,Laboclin,Cádmio urinário final de jornada de trabalho
+ex_0206,Laboclin,Cálcio
+ex_0207,Laboclin,Cálcio canino
+ex_0208,Laboclin,Calcio equino
+ex_0209,Laboclin,Cálcio felino
+ex_0210,Laboclin,Cálcio iônico
+ex_0211,Laboclin,Cálcio urinário 24 horas
+ex_0212,Laboclin,Cálcio urinário amostra isolada
+ex_0213,Laboclin,Cálciocao
+ex_0214,Laboclin,Calcitonina
+ex_0215,Laboclin,Calprotectina em fezes
+ex_0216,Laboclin,Candida anticorpos igg
+ex_0217,Laboclin,Candida anticorpos igm
+ex_0218,Laboclin,Carbamazepina
+ex_0219,Laboclin,Carboxihemoglobina
+ex_0220,Laboclin,Cardiolipina anticorpos igg
+ex_0221,Laboclin,Cardiolipina anticorpos igm
+ex_0222,Laboclin,Cardiolipina iga anticorpos anti
+ex_0223,Laboclin,Carga viral de citomegalovirus plasma
+ex_0224,Laboclin,Caroteno
+ex_0225,Laboclin,Catecolaminas plasmáticas
+ex_0226,Laboclin,Ceruloplasmina
+ex_0227,Laboclin,Ceruloplasmina
+ex_0228,Laboclin,Chagas anticorpos igg elisa
+ex_0229,Laboclin,Chagas anticorpos igg ifi
+ex_0230,Laboclin,Chagas hemaglutinação
+ex_0231,Laboclin,Chlamydia trachomatis igg anticorpos anti
+ex_0232,Laboclin,Chlamydia trachomatis igm anticorpos anti
+ex_0233,Laboclin,Chumbo sanguíneo
+ex_0234,Laboclin,Chumbo urinário início de jornada de trabalho
+ex_0235,Laboclin,Cistatina c
+ex_0236,Laboclin,Cistina quantitativa urina 24 horas
+ex_0237,Laboclin,Citologia oncótica de liquidos
+ex_0238,Laboclin,Citomegalovírus igg anticorpos anti
+ex_0239,Laboclin,Citomegalovírus igm anticorpos anti
+ex_0240,Laboclin,Citrato urinário amostra isolada
+ex_0241,Laboclin,Citrato urinário urina 24 horas
+ex_0242,Laboclin,Ck creatina fosfoquinase
+ex_0243,Laboclin,Ck creatina fosfoquinase canino
+ex_0244,Laboclin,Clearence de creatinina
+ex_0245,Laboclin,Clearence de uréia
+ex_0246,Laboclin,Clobazam
+ex_0247,Laboclin,Cloro
+ex_0248,Laboclin,Cloro canino
+ex_0249,Laboclin,Cloro felino
+ex_0250,Laboclin,Cloro urinário (urina 24 horas)
+ex_0251,Laboclin,Coagulograma
+ex_0252,Laboclin,Cobalto sérico
+ex_0253,Laboclin,Cobre
+ex_0254,Laboclin,Coenzima q10
+ex_0255,Laboclin,Colesterol hdl
+ex_0256,Laboclin,Colesterol hdl canino
+ex_0257,Laboclin,Colesterol ldl
+ex_0258,Laboclin,Colesterol total
+ex_0259,Laboclin,Colesterol total canino
+ex_0260,Laboclin,Colesterol total e frações
+ex_0261,Laboclin,Colesterol total e frações canino
+ex_0262,Laboclin,Colesterol total equino
+ex_0263,Laboclin,Colesterol total felino
+ex_0264,Laboclin,Colesterol total ovina
+ex_0265,Laboclin,Colesterol vldl
+ex_0266,Laboclin,Colinesterase
+ex_0267,Laboclin,Complemento c1 esterase inibidor atividade
+ex_0268,Laboclin,Complemento c1q
+ex_0269,Laboclin,Complemento c1q
+ex_0270,Laboclin,Complemento c2
+ex_0271,Laboclin,Complemento c5
+ex_0272,Laboclin,Complemento c5
+ex_0273,Laboclin,Coombs direto
+ex_0274,Laboclin,Coombs indireto
+ex_0275,Laboclin,Coombs indireto quantitativo
+ex_0276,Laboclin,Cortisol
+ex_0277,Laboclin,Cortisol salivar basal
+ex_0278,Laboclin,Cortisol salivar manhã
+ex_0279,Laboclin,Cortisol salivar manhã por lc ms ms
+ex_0280,Laboclin,Cortisol salivar noite
+ex_0281,Laboclin,Cortisol salivar tarde
+ex_0282,Laboclin,Cortisol urinário urina 24 horas
+ex_0283,Laboclin,Corynebacterium diphtheriae anticorpos igg
+ex_0284,Laboclin,Creatinina
+ex_0285,Laboclin,Creatinina bovino
+ex_0286,Laboclin,Creatinina canina
+ex_0287,Laboclin,Creatinina equino
+ex_0288,Laboclin,Creatinina felina
+ex_0289,Laboclin,Creatinina ovino
+ex_0290,Laboclin,Creatinina urinária amostra isolada
+ex_0291,Laboclin,Creatinina urinária urina 24 horas
+ex_0292,Laboclin,Crioglobulinas pesquisa
+ex_0293,Laboclin,Cromatografia de aminoacidos da urina
+ex_0294,Laboclin,Cromatografia de aminoacidos no sangue
+ex_0295,Laboclin,"Cromatografia de glicídeos qualitativa, urina"
+ex_0296,Laboclin,Cromo serico
+ex_0297,Laboclin,Cromo urinario (início de jornada de trabalho)
+ex_0298,Laboclin,Cryptococcus neoformans pesquisa
+ex_0299,Laboclin,Cultura com contagem de colônias antibiograma
+ex_0300,Laboclin,Cultura e antibiograma líquor
+ex_0301,Laboclin,Cultura fungos
+ex_0302,Laboclin,Cultura para micobactéria baar
+ex_0303,Laboclin,Cultura secreçao vaginal egb
+ex_0304,Laboclin,Cultura streptococcus grupo b
+ex_0305,Laboclin,Dehidroepiandrosterona dhea saliva
+ex_0306,Laboclin,Detecção de chlamydia trachomatis
+ex_0307,Laboclin,Detecção de hcv pcr
+ex_0308,Laboclin,Detecção de herpes simplex tipo 1 e 2
+ex_0309,Laboclin,Detecção de herpes simplex tipo 1 e 2 pcr qualitativo
+ex_0310,Laboclin,Detecção de htlv i e ii
+ex_0311,Laboclin,Detecção de mycobacterium tuberculosis e resis a rifampicina
+ex_0312,Laboclin,Detecção de neisseria gonorrhoeae
+ex_0313,Laboclin,Determinação da atividade anti fator x ativado
+ex_0314,Laboclin,Dhea dehidroepiandrosterona
+ex_0315,Laboclin,Dihidrotestosterona dht
+ex_0316,Laboclin,Dosagem de gordura fecal quantificação
+ex_0317,Laboclin,Dosagem levetiracetam
+ex_0318,Laboclin,Elastase pancreática fezes
+ex_0319,Laboclin,Eletroforese de hemoglobinas
+ex_0320,Laboclin,Eletroforese de proteínas serica
+ex_0321,Laboclin,Eletroforese de proteínas urina
+ex_0322,Laboclin,Eletroforese de proteínas urina 24 horas
+ex_0323,Laboclin,Enolase neurônio específica
+ex_0324,Laboclin,Epstein barr igg anticorpos anti vca
+ex_0325,Laboclin,Epstein barr igm anticorpos anti vca
+ex_0326,Laboclin,Eritropoietina dosagem
+ex_0327,Laboclin,Espermocultura
+ex_0328,Laboclin,Espermograma
+ex_0329,Laboclin,Esquistossomose igg sorologia
+ex_0330,Laboclin,Estradiol e2
+ex_0331,Laboclin,Estradiol ultrassensível lc ms ms
+ex_0332,Laboclin,Estriol e3
+ex_0333,Laboclin,Estrona e1
+ex_0334,Laboclin,Etanol- urinario
+ex_0335,Laboclin,Fan fator antinuclear
+ex_0336,Laboclin,Fator reumatóide
+ex_0337,Laboclin,Fator reumatóide canino
+ex_0338,Laboclin,Fator vii
+ex_0339,Laboclin,Fator x
+ex_0340,Laboclin,Fator xii
+ex_0341,Laboclin,Fenobarbital canino
+ex_0342,Laboclin,Fenotipagem para populações linfocitárias
+ex_0343,Laboclin,Ferritina
+ex_0344,Laboclin,Ferro sérico
+ex_0345,Laboclin,Ferro sérico canino
+ex_0346,Laboclin,Filariose sorologia
+ex_0347,Laboclin,Fit sangue oculto pesquisa com anticorpos monoclonais
+ex_0348,Laboclin,Fluor - fluoreto
+ex_0349,Laboclin,Fluoretos ( urinárina inicio de jornada )
+ex_0350,Laboclin,Fluxograma
+ex_0351,Laboclin,Fosfatase alcalina
+ex_0352,Laboclin,Fosfatase alcalina bovino
+ex_0353,Laboclin,Fosfatase alcalina canina
+ex_0354,Laboclin,Fosfatase alcalina equino
+ex_0355,Laboclin,Fosfatase alcalina felina
+ex_0356,Laboclin,Fosfatase alcalina ovino
+ex_0357,Laboclin,Fosfatidiletanolamina igg igm e iga
+ex_0358,Laboclin,Fósforo
+ex_0359,Laboclin,Fósforo canino
+ex_0360,Laboclin,Fósforo equino
+ex_0361,Laboclin,Fósforo urinário urina 24 horas
+ex_0362,Laboclin,Frutosamina
+ex_0363,Laboclin,Fsh hormônio folículo estimulante
+ex_0364,Laboclin,Galactose alpha 1 3 galactose alpha gal ige
+ex_0365,Laboclin,Gama interferon igra tuberculose
+ex_0366,Laboclin,Gastrina
+ex_0367,Laboclin,Genera basic
+ex_0368,Laboclin,Genera premium
+ex_0369,Laboclin,Genera standard
+ex_0370,Laboclin,Ggt gama glutamil transferase
+ex_0371,Laboclin,Ggt gama glutamil transferase bovina
+ex_0372,Laboclin,Ggt gama glutamil transferase canina
+ex_0373,Laboclin,Ggt gama glutamil transferase equino
+ex_0374,Laboclin,Ggt gama glutamil transferase felina
+ex_0375,Laboclin,Glicose
+ex_0376,Laboclin,Glicose bovino
+ex_0377,Laboclin,Glicose canina
+ex_0378,Laboclin,Glicose equino
+ex_0379,Laboclin,Glicose felina
+ex_0380,Laboclin,Glicose ovino
+ex_0381,Laboclin,Globulina ligadora de tiroxina
+ex_0382,Laboclin,Glucagon dosagen
+ex_0383,Laboclin,Glutamato desidrogenase
+ex_0384,Laboclin,Gordura fecal ácido graxos pesquisa
+ex_0385,Laboclin,Grupo sanguíneo e fator rh
+ex_0386,Laboclin,Haemophilus ducreyi pesquisa cancro mole
+ex_0387,Laboclin,Haptoglobina
+ex_0388,Laboclin,Hcg gonadotrofina coriônica fração beta livre
+ex_0389,Laboclin,Helicobacter pylori antígeno fezes
+ex_0390,Laboclin,Helicobacter pylori igg anticorpos anti
+ex_0391,Laboclin,Helicobacter pylori igm anticorpos anti
+ex_0392,Laboclin,Hematologia
+ex_0393,Laboclin,Hemoglobina glicada
+ex_0394,Laboclin,Hemoglobina glicada canina
+ex_0395,Laboclin,Hemoglobina glicada felina
+ex_0396,Laboclin,Hemograma completo
+ex_0397,Laboclin,Hemossiderina
+ex_0398,Laboclin,Hepatite a anti hva igg
+ex_0399,Laboclin,Hepatite a anti hva igm
+ex_0400,Laboclin,Hepatite b anti hbc total igg igm
+ex_0401,Laboclin,Hepatite b hbsag antígeno austrália
+ex_0402,Laboclin,Hepatite c anti hcv
+ex_0403,Laboclin,Hepatite c detecção por pcr
+ex_0404,Laboclin,Hepatite d anticorpos igg
+ex_0405,Laboclin,Hepatite d anticorpos igm
+ex_0406,Laboclin,Hepatite d hdv anticorpos t voltar hepatite d hdv anticorpos totais voltar hepatite d hdv anticorpos totais
+ex_0407,Laboclin,Hepatite d vírus hdv rna carga viral
+ex_0408,Laboclin,Hepatite e anti hev igg
+ex_0409,Laboclin,Hepatite e anti hev igm
+ex_0410,Laboclin,Herpes simples anticorpos anti igg
+ex_0411,Laboclin,Herpes simples anticorpos anti igm
+ex_0412,Laboclin,Herpes simplex vírus 1 2 hsv 1 2 quantitativo
+ex_0413,Laboclin,Herpes zoster igg anticorpos anti
+ex_0414,Laboclin,Herpes zoster igm anticorpos anti
+ex_0415,Laboclin,Hgh hormônio do crescimento
+ex_0416,Laboclin,Histamina
+ex_0417,Laboclin,Hiv 1 e 2 anticorpos
+ex_0418,Laboclin,Homocisteína
+ex_0419,Laboclin,Hormônio anti mulleriano
+ex_0420,Laboclin,Hormônio do crescimento humano hgh curva
+ex_0421,Laboclin,Htlv i ii anticorpos anti
+ex_0422,Laboclin,Iga imunoglobulina a
+ex_0423,Laboclin,Ige esp c712 drogas sulfito sódico
+ex_0424,Laboclin,Ige esp f202 alimentos castanha de caju
+ex_0425,Laboclin,Ige esp f279 alimentos pimenta preta
+ex_0426,Laboclin,Ige esp f279 pimenta do chile
+ex_0427,Laboclin,Ige esp f287 alimentos feijão vermelho
+ex_0428,Laboclin,Ige esp f293 alimentos mamão
+ex_0429,Laboclin,Ige esp f294 alimentos kiwi
+ex_0430,Laboclin,Ige esp f294 alimentos maracujá
+ex_0431,Laboclin,Ige esp f329 alimentos melancia
+ex_0432,Laboclin,Ige esp rastf75 alimentos gema de ovo
+ex_0433,Laboclin,Ige esp t70 pólens de árvores amoreira branca
+ex_0434,Laboclin,Ige esp tx7 pólens de árvores 7
+ex_0435,Laboclin,Ige específico alimentos queijo
+ex_0436,Laboclin,Ige específico f15 alimentos feijão branco
+ex_0437,Laboclin,Ige específico f208 alimentos limao
+ex_0438,Laboclin,Ige específico f210 alimentos abacaxi
+ex_0439,Laboclin,Ige específico f231 alimentos leite fervido
+ex_0440,Laboclin,Ige específico f232 alimentos ovo albumina
+ex_0441,Laboclin,Ige específico f233 alimentos ovomucóide
+ex_0442,Laboclin,Ige específico f25 alimentos tomate
+ex_0443,Laboclin,Ige específico f259 alimentos uva
+ex_0444,Laboclin,Ige específico f269 manjericão
+ex_0445,Laboclin,Ige específico f3 alimentos peixe bacalhau
+ex_0446,Laboclin,Ige específico f319 alimentos beterraba
+ex_0447,Laboclin,Ige específico f33 alimentos laranja
+ex_0448,Laboclin,Ige específico f331 açafrao
+ex_0449,Laboclin,Ige específico f44 alimentos morango
+ex_0450,Laboclin,Ige específico f48 alimentos cebola
+ex_0451,Laboclin,Ige específico f49 alimentos maçã
+ex_0452,Laboclin,Ige específico f89 alimentos mostarda
+ex_0453,Laboclin,Ige específico f94 alimentos pera
+ex_0454,Laboclin,Ige específico h2 pó de casa hollister stier
+ex_0455,Laboclin,Ige específico k76 ocupacionais isocianato mdi
+ex_0456,Laboclin,Ige específico m5 fungos candida albicans
+ex_0457,Laboclin,Ige específico m6 fungos a. alternata
+ex_0458,Laboclin,Ige específico rastd1 ácaros d. pteronyssinus
+ex_0459,Laboclin,Ige específico rastd2 ácaros dermatophafoides farinae
+ex_0460,Laboclin,Ige específico rastd201 ácaros blomia tropicalis
+ex_0461,Laboclin,Ige específico rastf1 alimentos clara do ovo
+ex_0462,Laboclin,Ige específico rastf2 alimentos leite
+ex_0463,Laboclin,Ige específico rastf245 alimentos ovo
+ex_0464,Laboclin,Ige especificol ip6 inalantes
+ex_0465,Laboclin,Ige painel (f220) - alimentos -canela
+ex_0466,Laboclin,Ige painel (f85) - alimentos -aipo
+ex_0467,Laboclin,Ige painel f47 alimentos alho
+ex_0468,Laboclin,Ige painel f7 alimentos aveia
+ex_0469,Laboclin,Ige painel f86 alimentos salsa
+ex_0470,Laboclin,Ige painel tx7 árvores
+ex_0471,Laboclin,Ige painel wx5 ervas
+ex_0472,Laboclin,Ige total imunoglobulina e
+ex_0473,Laboclin,Igg 1 subclasse de igg
+ex_0474,Laboclin,Igg 2 subclasse de igg
+ex_0475,Laboclin,Igg 3 subclasse de igg
+ex_0476,Laboclin,Igg 4 subclasse de igg
+ex_0477,Laboclin,Igg imunoglobulina g
+ex_0478,Laboclin,Igm imunoglobulina m
+ex_0479,Laboclin,Imunoeletroforese de proteína urinário
+ex_0480,Laboclin,Imunofenotipagem para linfócitos b cd20
+ex_0481,Laboclin,Imunofenotipagem para linfócitos t cd3 subpopulação cd4 cd8
+ex_0482,Laboclin,Imunofenotipagem sangue total edta
+ex_0483,Laboclin,Imunoglobulina a iga secretora
+ex_0484,Laboclin,Imunoglobulina a iga secretora
+ex_0485,Laboclin,Índice de saturação da transferrina
+ex_0486,Laboclin,Inibidor do fator viii
+ex_0487,Laboclin,Insulina
+ex_0488,Laboclin,Insulina livre
+ex_0489,Laboclin,Insulina pós prandial
+ex_0490,Laboclin,Interleucina 1 beta il 1beta
+ex_0491,Laboclin,Interleucina 10 il 10
+ex_0492,Laboclin,Interleucina 12
+ex_0493,Laboclin,Interleucina 2 il 2
+ex_0494,Laboclin,Interleucina 4
+ex_0495,Laboclin,Interleucina 6
+ex_0496,Laboclin,Iodo urinario
+ex_0497,Laboclin,Jo1 anticorpos anti
+ex_0498,Laboclin,Lactoferrina fezes
+ex_0499,Laboclin,Ldh lactato desidrogenase
+ex_0500,Laboclin,Ldh lactato desidrogenase canino
+ex_0501,Laboclin,Ldl oxidada - anticorpos
+ex_0502,Laboclin,Le pesquisa de auto anticorpos
+ex_0503,Laboclin,Leishmania anticorpos igm ifi
+ex_0504,Laboclin,Leishmania antígeno igm ifi
+ex_0505,Laboclin,Leishmaniose visceral
+ex_0506,Laboclin,Leptina
+ex_0507,Laboclin,Lh hormônio luteinizante
+ex_0508,Laboclin,Linfócitos t cd3
+ex_0509,Laboclin,Lipase
+ex_0510,Laboclin,Lipoproteína lp a
+ex_0511,Laboclin,Liquido pleural rotina voltar liquido pleural rotina voltar painel ngs para leucodistrofia
+ex_0512,Laboclin,Líquido sinovial - pesquisa
+ex_0513,Laboclin,Lítio
+ex_0514,Laboclin,Macroprolactina
+ex_0515,Laboclin,Magnésio
+ex_0516,Laboclin,Magnésio eritrocitário
+ex_0517,Laboclin,Malondialdeído lpo
+ex_0518,Laboclin,Manganês
+ex_0519,Laboclin,Manganês urinario
+ex_0520,Laboclin,Melanina urina
+ex_0521,Laboclin,Melatonina salivar
+ex_0522,Laboclin,Metil etil cetona urinária
+ex_0523,Laboclin,Micologico direto pesquisa
+ex_0524,Laboclin,Micologico direto raspado canino
+ex_0525,Laboclin,Micologico direto raspado equino
+ex_0526,Laboclin,Microalbuminúria amostra isolada
+ex_0527,Laboclin,Microalbuminúria urina 24 horas
+ex_0528,Laboclin,Microbioma intestinal
+ex_0529,Laboclin,Microdeleções cromossomo y azfa azfb azfc
+ex_0530,Laboclin,Mieloperoxidase p anca c anca antiperoxidase
+ex_0531,Laboclin,Mog mielina oligodendrocito glicoproteina anticorpos soro
+ex_0532,Laboclin,Mucoproteínas alfa 1 glicoproteína ácida
+ex_0533,Laboclin,Osmolalidade urina
+ex_0534,Laboclin,Osmolalidade urina 24 horas
+ex_0535,Laboclin,Osteocalcina
+ex_0536,Laboclin,Oxalato ácido oxálico
+ex_0537,Laboclin,Painel ampliado para epilepsia
+ex_0538,Laboclin,Painel farmacogenético completo pharmone
+ex_0539,Laboclin,Painel ngs neoplasias mielóides e síndrome mielodisplásica
+ex_0540,Laboclin,Painel ngs para displasias esqueléticas
+ex_0541,Laboclin,Painel ngs para distrofia muscular miopatia e miastenia
+ex_0542,Laboclin,Painel para câncer de mama ovário hereditário com cnv
+ex_0543,Laboclin,Painel para câncer hereditário com cnv
+ex_0544,Laboclin,Painel para doenças sexualmente transmissíveis
+ex_0545,Laboclin,Painel pcr para influenzas a e b vírus sincicial e sars cov 2
+ex_0546,Laboclin,Papilomavírus humano hpv genotipagem
+ex_0547,Laboclin,Parasitológico de fezes mif
+ex_0548,Laboclin,Parvovírus b 19 anticorpos igg e igm
+ex_0549,Laboclin,Pccu
+ex_0550,Laboclin,Pccu papanicolau citopatológico
+ex_0551,Laboclin,Pccumunicipio
+ex_0552,Laboclin,Pcr proteina c reativa
+ex_0553,Laboclin,Peptídeo c
+ex_0554,Laboclin,Perfil lipídico
+ex_0555,Laboclin,Pesquisa da mutação r506q fator v de leiden
+ex_0556,Laboclin,Pesquisa de detecção da mutação v617f no gene jak 2 sangue
+ex_0557,Laboclin,Pesquisa de fungos voltar pesquisa de fungos
+ex_0558,Laboclin,Pesquisa de oxiúrus enterobius vermiculares
+ex_0559,Laboclin,Pesquisa indican teste de disbiose
+ex_0560,Laboclin,Pesquisa indican teste de disbiose
+ex_0561,Laboclin,Pesquisa para mucopolissacarídeos azul de toluidina
+ex_0562,Laboclin,Ph urinario -eas
+ex_0563,Laboclin,Polissonografia
+ex_0564,Laboclin,Porfobilinogênio pesquisa
+ex_0565,Laboclin,Potássio
+ex_0566,Laboclin,Potássio canino
+ex_0567,Laboclin,Potassio equino
+ex_0568,Laboclin,Potássio felino
+ex_0569,Laboclin,Potássio urinário amostra isolada
+ex_0570,Laboclin,Pre calicreína plasma
+ex_0571,Laboclin,Pregnenolona
+ex_0572,Laboclin,Pró calcitonina
+ex_0573,Laboclin,Probnp peptídeo natriurético cerebral n terminal
+ex_0574,Laboclin,Progesterona
+ex_0575,Laboclin,Progesterona canina
+ex_0576,Laboclin,Progesterona saliva
+ex_0577,Laboclin,Prolactina
+ex_0578,Laboclin,Proteína a plasmática associada à gravidez papp
+ex_0579,Laboclin,Proteina cationica eosinofilica ecp soro tnf alfa caquetina
+ex_0580,Laboclin,Proteina s 100 s 100 beta
+ex_0581,Laboclin,Proteína s antigênica
+ex_0582,Laboclin,Proteina s funcional
+ex_0583,Laboclin,Proteina s livre
+ex_0584,Laboclin,Proteína transportadora de retinol
+ex_0585,Laboclin,Proteína urinária amostra isolada
+ex_0586,Laboclin,Proteína urinária urina 24 horas
+ex_0587,Laboclin,Prova coprológica funcional
+ex_0588,Laboclin,Psa total livre
+ex_0589,Laboclin,Pso pesquisa de sangue oculto nas fezes
+ex_0590,Laboclin,Pth paratormônio
+ex_0591,Laboclin,Rapamicina sirolimus dosagem
+ex_0592,Laboclin,Raspado direto pesquisa de leishmaniose
+ex_0593,Laboclin,Receptor solúvel da transferrina
+ex_0594,Laboclin,Relação proteína creatinina em urina
+ex_0595,Laboclin,Relação proteína creatinina urinária
+ex_0596,Laboclin,Renina
+ex_0597,Laboclin,Renina atividade
+ex_0598,Laboclin,Resistência a proteína c ativada rpca
+ex_0599,Laboclin,Reticulócitos contagem
+ex_0600,Laboclin,Risperidona
+ex_0601,Laboclin,Rubéola avidez anticorpos igg
+ex_0602,Laboclin,Rubéola igg anticorpos anti
+ex_0603,Laboclin,Rubéola igm anticorpos anti
+ex_0604,Laboclin,Sangue oculto pesquisa com anticorpos monoclonais alvaro
+ex_0605,Laboclin,Sdhea sulfato de dehidroepiandrosterona
+ex_0606,Laboclin,Sequenciamento do exoma completo
+ex_0607,Laboclin,Sequenciamento ngs do gene btd
+ex_0608,Laboclin,Sequenciamento ngs genes brca1 e brca2 com análise cnv
+ex_0609,Laboclin,Serotonina
+ex_0610,Laboclin,Sexagem fetal amostra materna
+ex_0611,Laboclin,Shbg globulina ligadora de hormônios sexuais
+ex_0612,Laboclin,Sm anticorpos anti
+ex_0613,Laboclin,Snp array cgh array
+ex_0614,Laboclin,Sódio
+ex_0615,Laboclin,Sódio canino
+ex_0616,Laboclin,Sódio felino
+ex_0617,Laboclin,Sódio urinário amostra isolada
+ex_0618,Laboclin,Somatomedina c igf 1
+ex_0619,Laboclin,Sorologia para covid 19 anticorpos igg
+ex_0620,Laboclin,Sorologia para covid 19 anticorpos totais igm igg
+ex_0621,Laboclin,Sorologia para covid 19 iga igg anticorpos totais
+ex_0622,Laboclin,Sorologia para esporotricose
+ex_0623,Laboclin,Ss a ro anticorpos anti
+ex_0624,Laboclin,Ss b la anticorpos anti
+ex_0625,Laboclin,Subclasses de igg humana
+ex_0626,Laboclin,Substâncias redutoras pesquisa
+ex_0627,Laboclin,T3 livre
+ex_0628,Laboclin,T3 total
+ex_0629,Laboclin,T4 livre
+ex_0630,Laboclin,T4 total
+ex_0631,Laboclin,Telopeptídeo c terminal ctx
+ex_0632,Laboclin,Telopeptídeo cross links ntx
+ex_0633,Laboclin,Teste de estímulo do lh e fsh após lhrh
+ex_0634,Laboclin,Teste de intolerância alimentar pesquisa 216 alimentos
+ex_0635,Laboclin,Teste de tolerancia a lactose 50g
+ex_0636,Laboclin,Teste molecular de tolerância a lactose gene mcm6
+ex_0637,Laboclin,Teste para detecção de antígenos covid 19 ag e influenza a b
+ex_0638,Laboclin,Teste para detecção de coronavírus sars cov 2
+ex_0639,Laboclin,Teste rápido para detecção de coronavírus sars cov 2
+ex_0640,Laboclin,Testosterona biodisponivel
+ex_0641,Laboclin,Testosterona com diluição
+ex_0642,Laboclin,Testosterona livre
+ex_0643,Laboclin,Testosterona livre saliva
+ex_0644,Laboclin,Testosterona total
+ex_0645,Laboclin,Tétano anticorpos igg
+ex_0646,Laboclin,Tireoglobulina com índice de recuperaçao
+ex_0647,Laboclin,Tireoglobulina dosagem
+ex_0648,Laboclin,Toxoplasmose avidez anticorpos igg
+ex_0649,Laboclin,Toxoplasmose igg cmia
+ex_0650,Laboclin,Toxoplasmose igm cmia
+ex_0651,Laboclin,Trab anticorpo anti receptor de tsh
+ex_0652,Laboclin,Transferrina
+ex_0653,Laboclin,Triagem mínima para erros inatos do metabolismo
+ex_0654,Laboclin,Triciclicos sanguineos-dosagem
+ex_0655,Laboclin,Triclorocompostos totais
+ex_0656,Laboclin,Tricograma direto
+ex_0657,Laboclin,Triglicerídeos
+ex_0658,Laboclin,Triglicerídeos canino
+ex_0659,Laboclin,Triglicerídeos felino
+ex_0660,Laboclin,Troponina t
+ex_0661,Laboclin,Trypanosoma cruzi - pesquisa
+ex_0662,Laboclin,Tsh hormônio tireoestimulante ultrasensível
+ex_0663,Laboclin,Uréia
+ex_0664,Laboclin,Uréia bovino
+ex_0665,Laboclin,Uréia canina
+ex_0666,Laboclin,Uréia equino
+ex_0667,Laboclin,Uréia felina
+ex_0668,Laboclin,Uréia ovino
+ex_0669,Laboclin,Uréia urinária urina 24 horas
+ex_0670,Laboclin,Urina (eas) -3 amostras
+ex_0671,Laboclin,Urina eas
+ex_0672,Laboclin,Urina eas cão
+ex_0673,Laboclin,Urina eas equino
+ex_0674,Laboclin,Urina eas gato
+ex_0675,Laboclin,Urocultura com contagem de colônias antibiograma
+ex_0676,Laboclin,Urocultura com contagem de colônias antibiograma
+ex_0677,Laboclin,Urocultura com contagem de colônias antibiograma felina
+ex_0678,Laboclin,Uroporfirina-pesquisa
+ex_0679,Laboclin,Vdrl gestante
+ex_0680,Laboclin,Vdrl líquor
+ex_0681,Laboclin,Vdrl lues
+ex_0682,Laboclin,Vhs velocidade de hemossedimentação
+ex_0683,Laboclin,Vitamina a
+ex_0684,Laboclin,Vitamina b12
+ex_0685,Laboclin,Vitamina b2
+ex_0686,Laboclin,Vitamina b3 nicotinamida
+ex_0687,Laboclin,Vitamina b5 ácido pantotênico
+ex_0688,Laboclin,Vitamina c ácido ascórbico
+ex_0689,Laboclin,Vitamina d 1 25 dihidroxi
+ex_0690,Laboclin,Vitamina d 25 hidroxi
+ex_0691,Laboclin,Vitamina e
+ex_0692,Laboclin,Vitamina h b7 b8 biotina
+ex_0693,Laboclin,Vitamina k
+ex_0694,Laboclin,Waaler rose
+ex_0695,Laboclin,Zinco
+ex_0696,Laboclin,Zinco eritrocitário
+ex_0697,Policlínica ASO,Ultrassom Obstétrica
+ex_0698,Policlínica ASO,Ultrassom Morfológica
+ex_0699,Policlínica ASO,PCCU/Colposcopia
+ex_0700,Diagmed,Ressonância Magnética
+ex_0701,Diagmed,Tomografia computadorizada Helicoidal 24h
+ex_0702,Diagmed,Ultrassonografia em geral: 3D e 4D
+ex_0703,Diagmed,Mamografia digital bilateral
+ex_0704,Diagmed,Desintometria Óssea
+ex_0705,Diagmed,Raio X digital
+ex_0706,Diagmed,Ultrassonografia Obstetrícia
+ex_0707,Diagmed,Ultrassonografia Pediátrica
+ex_0708,Diagmed,Ultrassonografia Transvaginal
+ex_0709,Diagmed,Ultrassonografia Urológica
+ex_0710,Diagmed,Ultrassonografia Abdominal
+ex_0711,Diagmed,Ultrassonografia de articulações
+ex_0712,Diagmed,Ultrassonografia com Doppler colorido
+ex_0713,Clínica Orogastro Saúde,Endoscopia
+ex_0714,Clínica Orogastro Saúde,Colonoscopia
+ex_0715,Clínica Orogastro Saúde,Videolaparospia
+ex_0716,Clínica Orogastro Saúde,Balão Intragástrico
+ex_0717,Instituto Médico Vida,Densitometria Óssea
+ex_0718,Instituto Médico Vida,Ultrassonografia
+ex_0719,Instituto Médico Vida,Raio X
+ex_0720,Instituto Médico Vida,Preventivo (Papanicolau)
+ex_0721,Laboratório Popular de Altamira,Hematologia
+ex_0722,Laboratório Popular de Altamira,Bioquímica
+ex_0723,Laboratório Popular de Altamira,Hormônios
+ex_0724,Laboratório Popular de Altamira,Imunologia
+ex_0725,Laboratório Popular de Altamira,Microbiologia
+ex_0726,Laboratório Popular de Altamira,Urinálise
+ex_0727,Laboratório Popular de Altamira,Medicina Ocupacional
+ex_0728,Laboratório Popular de Altamira,Parasitologia
+ex_0729,Laboratório Popular de Altamira,Teste do Pezinho
+ex_0730,Laboratório Popular de Altamira,Citologia
+ex_0731,Laboratório Popular de Altamira,Patologia Clínica
+ex_0732,Laboratório Popular de Altamira,Teste de Paternidade
+ex_0733,Laboratório Popular de Altamira,Toxicológico
+ex_0734,Laboratório Popular de Altamira,Sexagem Fetal
+ex_0735,Laboratório Popular de Altamira,Exames do coração
+ex_0736,Laboratório Popular de Altamira,Ultrassonografia
+ex_0737,Norte Vitta,Hemograma
+ex_0738,Norte Vitta,Glicose em jejum
+ex_0739,Norte Vitta,Colesterol total e frações
+ex_0740,Norte Vitta,Ureia
+ex_0741,Norte Vitta,Creatinina
+ex_0742,Norte Vitta,TGO/TGP
+ex_0743,Norte Vitta,Urina (EAS)
+ex_0744,Norte Vitta,Parasitológico de fezes
+ex_0745,Norte Vitta,PSA 
+ex_0746,Norte Vitta,TSH
