@@ -22,7 +22,8 @@ def run_ingestion():
     print("[*] INICIANDO INGESTAO DE BASES REAIS - GUIA DE SAUDE ALTAMIRA")
     print("=" * 65)
 
-    # Garante que as tabelas existem
+    # Recria tabelas com schema atualizado
+    Base.metadata.drop_all(bind=engine)
     Base.metadata.create_all(bind=engine)
     db = SessionLocal()
 

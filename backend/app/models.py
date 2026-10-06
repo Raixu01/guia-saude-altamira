@@ -31,13 +31,13 @@ class Estabelecimento(Base):
     __tablename__ = "estabelecimentos"
 
     id = Column(String(36), primary_key=True, default=generate_uuid)
-    nome = Column(String(150), nullable=False, index=True)
+    nome = Column(String(255), nullable=False, index=True)
     tipo = Column(String(50), default="clinica")  # clinica, hospital, laboratorio, farmacia
     endereco = Column(Text, nullable=False)
     bairro = Column(String(100), nullable=False)
     cidade = Column(String(100), default="Altamira - PA")
-    telefone_fixo = Column(String(30), nullable=True)
-    whatsapp = Column(String(30), nullable=True)
+    telefone_fixo = Column(String(100), nullable=True)
+    whatsapp = Column(String(100), nullable=True)
     google_maps_url = Column(Text, nullable=True)
     instagram_url = Column(Text, nullable=True)
     status_verificacao = Column(String(50), default="informado_planilha")  # verificado, informado_planilha
@@ -54,9 +54,9 @@ class Profissional(Base):
     __tablename__ = "profissionais"
 
     id = Column(String(36), primary_key=True, default=generate_uuid)
-    nome = Column(String(150), nullable=False, index=True)
-    registro_conselho = Column(String(50), nullable=False)  # ex: CRM-PA 5892
-    subtitulo = Column(String(100), nullable=True)  # ex: Cardiologia Pediátrica
+    nome = Column(String(255), nullable=False, index=True)
+    registro_conselho = Column(String(255), nullable=False)  # ex: CRM-PA 5892
+    subtitulo = Column(String(255), nullable=True)  # ex: Cardiologia Pediátrica
     avatar_url = Column(Text, nullable=True)
     especialidade_id = Column(String(36), ForeignKey("especialidades.id"), nullable=False)
     status_verificacao = Column(String(50), default="informado_planilha")  # verificado, informado_planilha
@@ -74,7 +74,7 @@ class ProfissionalEstabelecimento(Base):
     id = Column(String(36), primary_key=True, default=generate_uuid)
     profissional_id = Column(String(36), ForeignKey("profissionais.id"), nullable=False)
     estabelecimento_id = Column(String(36), ForeignKey("estabelecimentos.id"), nullable=False)
-    dias_atendimento = Column(String(150), nullable=True)
+    dias_atendimento = Column(Text, nullable=True)
     observacoes = Column(Text, nullable=True)
 
     profissional = relationship("Profissional", back_populates="locais_atendimento")
@@ -84,9 +84,9 @@ class Exame(Base):
     __tablename__ = "exames"
 
     id = Column(String(36), primary_key=True, default=generate_uuid)
-    nome = Column(String(200), nullable=False, index=True)
-    categoria = Column(String(50), default="geral")  # sangue, imagem, cardiologico
-    letra_inicial = Column(String(1), nullable=False, index=True)  # A, B, C...
+    nome = Column(String(255), nullable=False, index=True)
+    categoria = Column(String(100), default="geral")  # sangue, imagem, cardiologico
+    letra_inicial = Column(String(5), nullable=False, index=True)  # A, B, C...
     preparo_basico = Column(Text, nullable=True)
 
     estabelecimentos = relationship("ExameEstabelecimento", back_populates="exame")
@@ -114,12 +114,12 @@ class ServicoSaude(Base):
 
     id = Column(String(36), primary_key=True, default=generate_uuid)
     categoria = Column(String(50), nullable=False, index=True)  # farmaceutico, enfermagem, cuidados
-    titulo = Column(String(150), nullable=False, index=True)
-    responsavel = Column(String(150), nullable=True)
-    horario_funcionamento = Column(String(100), nullable=True)
+    titulo = Column(String(255), nullable=False, index=True)
+    responsavel = Column(String(255), nullable=True)
+    horario_funcionamento = Column(String(150), nullable=True)
     endereco = Column(Text, nullable=True)
-    bairro = Column(String(100), nullable=True)
-    whatsapp = Column(String(30), nullable=False)
+    bairro = Column(String(150), nullable=True)
+    whatsapp = Column(String(100), nullable=False)
     google_maps_url = Column(Text, nullable=True)
     atendimento_domiciliar = Column(Boolean, default=False)
     tags = Column(Text, nullable=True)  # Lista separada por vírgulas

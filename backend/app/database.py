@@ -2,10 +2,13 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 from app.config import settings
 
-# Ajuste para SQLite (check_same_thread)
+# Ajuste para SQLite e Supabase Pooler (PgBouncer)
 connect_args = {}
 if settings.DATABASE_URL.startswith("sqlite"):
     connect_args = {"check_same_thread": False}
+elif "postgresql" in settings.DATABASE_URL:
+    # Desativa prepared statements no psycopg3 para total compatibilidade com PgBouncer / Supabase Pooler
+    connect_args = {"prepare_threshold": None}
 
 engine = create_engine(
     settings.DATABASE_URL,
